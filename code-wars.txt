@@ -10,7 +10,7 @@ function multiply(a, b){
   return a * b;
 };
 
--Question-
+-Question-Broken Greeting
 
 function Person(name){
   this.name = name;
@@ -22,3 +22,14 @@ Person.prototype.greet = function(otherName){
 
 -Answer-
 
+function Person(name){
+  this.name = name;
+}
+
+Person.prototype.greet = function(otherName){
+  return "Hi " + otherName + ", my name is " + this.name;
+}
+
+-Questions-
+
+-Answers-
