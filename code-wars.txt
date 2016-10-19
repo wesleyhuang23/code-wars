@@ -32,4 +32,17 @@ Person.prototype.greet = function(otherName){
 
 -Questions-
 
+function greet (name, owner) {
+  // Add code here
+}
+
 -Answers-
+
+function greet (name, owner) {
+  if(name === owner){
+    return "Hello boss";
+  }
+  else {
+    return "Hello guest";
+  }
+}
