@@ -81,8 +81,24 @@ function reverser(sentence) {
 }
 
 //-Question-
+function getMiddle(s)
+{
+  //Code goes here!
+}
 //-Answer-
-
+function getMiddle(s)
+{
+  var letters = s.split('');
+  var letter = "";
+  if(letters.length % 2 === 0){
+    letter = letters[letters.length/2 - 1] + letter;
+    letter = letter + letters[letters.length/2];
+    return letter;
+    } else if (letters.length % 2 !== 0) {
+    letter = letters[(letters.length - 1)/2] + letter;
+    return letter;
+    }
+}
 //-Question-
 //-Answer-
 
