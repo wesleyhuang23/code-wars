@@ -1,16 +1,16 @@
--Question-
+//-Question-
 
 function multiply(a, b){
   a * b
 };
 
-—Answer-
+//—Answer-
 
 function multiply(a, b){
   return a * b;
 };
 
--Question-Broken Greeting
+//-Question-Broken Greeting
 
 function Person(name){
   this.name = name;
@@ -20,7 +20,7 @@ Person.prototype.greet = function(otherName){
   return "Hi " + otherName + ", my name is " + name;
 }
 
--Answer-
+//-Answer-
 
 function Person(name){
   this.name = name;
@@ -30,13 +30,13 @@ Person.prototype.greet = function(otherName){
   return "Hi " + otherName + ", my name is " + this.name;
 }
 
--Questions-
+//-Questions-
 
 function greet (name, owner) {
   // Add code here
 }
 
--Answers-
+//-Answers-
 
 function greet (name, owner) {
   if(name === owner){
@@ -47,12 +47,12 @@ function greet (name, owner) {
   }
 }
 
--Questions-
+//-Questions-
 
 function grow(x){
 }
 
--Answer-
+//-Answer-
 
 function grow(x){
   var total = 1;
@@ -62,21 +62,71 @@ function grow(x){
     return total;
 }
 
--Question-
+//-Question-
 
 // reverse the letters in the sentence
 function reverser(sentence) {
-	
+
 }
 
--Answer-
+//-Answer-
 
 function reverser(sentence) {
-var word = [];
-var words = sentence.split(' ');
-  for(var i = 0; i < words.length; i++){
-    word.push(words[i].split('').reverse().join(''));
+  var word = [];
+  var words = sentence.split(' ');
+    for(var i = 0; i < words.length; i++){
+      word.push(words[i].split('').reverse().join(''));
     }
     return word.join(' ');
 }
 
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
