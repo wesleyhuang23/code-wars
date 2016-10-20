@@ -100,7 +100,17 @@ function getMiddle(s)
     }
 }
 //-Question-
+function repeatStr (n, s) {
+  return '';
+}
 //-Answer-
+function repeatStr (n, s) {
+  var result = "";
+  for(var i = 0; i < n; i++){
+    result = result + s;
+    }
+  return result;
+}
 
 //-Question-
 //-Answer-
