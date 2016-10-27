@@ -126,7 +126,22 @@ function trouble(x, t){
     return x;
 }
 //-Question-
+function replace(s){
+  //coding and coding....
+
+
+}
 //-Answer-
+function replace(s){
+  var char = s.split('');
+  for(var i = 0; i < char.length; i++){
+  if(char[i] === 'a' || char[i] === 'e' || char[i] === 'i' || char[i] ==='o' || char[i] === 'u' || char[i] === 'A' || char[i] === 'E' || char[i] === 'I' || char[i] === 'O' || char[i] === 'U'){
+  char[i] = '!';
+  }
+  }
+  return char.join('');
+
+}
 
 //-Question-
 //-Answer-
