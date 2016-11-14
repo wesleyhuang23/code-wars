@@ -144,8 +144,19 @@ function replace(s){
 }
 
 //-Question-
+function findSum(n){
+  return 0;
+}
 //-Answer-
-
+function findSum(n) {
+  var result = 0;
+  for(var i = 0; i <= n; i++){
+  if(i % 5 === 0 || i % 3 === 0){
+    result = result + i;
+  }
+}
+  return result;
+}
 //-Question-
 //-Answer-
 
