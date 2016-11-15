@@ -1,8 +1,8 @@
 //-Question-
 
-function multiply(a, b){
-  a * b
-};
+// function multiply(a, b){
+//   a * b
+// }
 
 //—Answer-
 
@@ -18,7 +18,7 @@ function Person(name){
 
 Person.prototype.greet = function(otherName){
   return "Hi " + otherName + ", my name is " + name;
-}
+};
 
 //-Answer-
 
@@ -158,6 +158,13 @@ function findSum(n) {
   return result;
 }
 //-Question-
+function bubblesortOnce(intArr) {
+  // Code the Bubblesort Algorithm here :D
+
+  // Hmmm ... maybe we should just use the built-in sort() method
+  // to sort our array - it'll save us some time ;)
+  return intArr.sort();
+}
 //-Answer-
 
 //-Question-
