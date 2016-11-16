@@ -166,10 +166,38 @@ function bubblesortOnce(intArr) {
   return intArr.sort();
 }
 //-Answer-
-
-//-Question-
+function accum(s) {
+	// your code
+}
+//-Question-Acums
+function accum(s) {
+	// your code
+}
 //-Answer-
-
+function accum(s) {
+	var ltr = s.split('');
+	var arr = [];
+  for(var i = 0; i < ltr.length; i++){
+      if(i > 0){
+        for(var j = 0; j < i + 1; j++){
+          if(j === 0){
+          arr.push(ltr[i].toUpperCase());
+          }
+          else {
+            arr.push(ltr[i].toLowerCase());
+          }
+        }
+        if(i < ltr.length - 1){
+        arr.push('-');
+       }
+      }
+      else {
+      arr.push(ltr[i].toUpperCase());
+      arr.push('-');
+    }
+  }
+  return arr.join('');
+}
 //-Question-
 //-Answer-
 
