@@ -166,9 +166,6 @@ function bubblesortOnce(intArr) {
   return intArr.sort();
 }
 //-Answer-
-function accum(s) {
-	// your code
-}
 //-Question-Acums
 function accum(s) {
 	// your code
@@ -198,9 +195,20 @@ function accum(s) {
   }
   return arr.join('');
 }
-//-Question-
+//-Question-count wins
+function countWins(winnerList, country) {
+  // your awesome code here
+}
 //-Answer-
-
+function countWins(winnerList, country) {
+  var count = 0;
+  for(var i = 0; i < winnerList.length; i++){
+  if(winnerList[i].country === country){
+    count = count + 1;
+  }
+  }
+  return count;
+}
 //-Question-
 //-Answer-
 
