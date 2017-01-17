@@ -209,12 +209,66 @@ function countWins(winnerList, country) {
   }
   return count;
 }
-//-Question-
+//-Question-will all coninets participate
+function allContinents(list) {
+  // thank you for checking out the Coding Meetup kata :)
+}
 //-Answer-
+function allContinents(list) {
+  var continents = [
+    {Africa: false},
+    {Americas: false},
+    {Asia: false},
+    {Europe: false},
+    {Oceania: false}
+  ]
+  for(var i = 0; i < list.length; i++){
+    if(list[i].continent === 'Afica'){
+      continents[0].Africa = true;
+    } else if (list[i].continent === 'Americas'){
+      continents[1].Americas = true;
+    } else if (list[i].continent === 'Asia'){
+      continents[2].Asia = true;
+    } else if (list[i].continent === 'Europe'){
+      continents[3].Europe = true;
+    } else if (list[i].continent === 'Oceania'){
+      continents[4].Oceania = true;
+    }
+  }
+  
+  var test = continents.filter(function(place){
+   return place.Africa || place.Americas || place.Asia || place.Europe || place.Oceania;
+  });
+  
+  if(test){
+  for(var j = 0; j < test.length; j++){
+    if(test[j].Africa === false || test[j].Americas === false || test[j].Asia === false || test[j].Europe === false || test[j].Oceania === false){
+      return false;
+    } else {
+     return true;
+    }
+  }
+  } else {
+    return false;
+  }
+}
 
-//-Question-
+//-Question- digits explosion
+function explode(s) {
+  return ;
+}
 //-Answer-
-
+function explode(s) {
+  var explosion = [];
+  var num = s.split('');
+  for(var i = 0; i < num.length; i++){
+    var x = num[i];
+    for(var j = 0; j < x; j++){
+      explosion.push(x);
+    }
+  }
+  return explosion.join('');
+}
 //-Question-
 //-Answer-
 
