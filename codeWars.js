@@ -300,6 +300,107 @@ function vowelOne(s){
   return num;
 }
 
+//-Question-convert string to number
+var stringToNumber = function(str){
+  
+}
+//-Answer-
+var stringToNumber = function(str){
+  return Number(str);
+}
+//-Question-conver string to array
+function stringToArray(string){
+
+	// code code code
+
+}
+//-Answer-
+function stringToArray(string){
+
+	return string.split(' ');
+
+}
+//-Question- convert boolean to string
+function booleanToString(b){
+
+}
+//-Answer-
+function booleanToString(b){
+  return b.toString();
+}
+
+//-Question-
+function boolToWord( bool ){
+  //...
+}
+//-Answer-
+function boolToWord( bool ){
+  if(bool){
+    return 'Yes';
+  } else {
+   return 'No';
+  }
+}
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
+//-Question-
+//-Answer-
+
 //-Question-
 //-Answer-
 
