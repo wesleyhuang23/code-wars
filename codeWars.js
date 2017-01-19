@@ -269,11 +269,36 @@ function explode(s) {
   }
   return explosion.join('');
 }
-//-Question-
+//-Question-convert strings into numbers
+function convert(arr) {
+  return arr
+}
 //-Answer-
-
-//-Question-
+function convert(arr) {
+  return arr.map(function(num){
+    return Number(num)
+    });
+}
+//-Question-convert vowel into number
+function vowelOne(s){
+  //..
+}
 //-Answer-
+function vowelOne(s){
+  var num = '';
+  var letters = s.split('');
+  var lowerCase = letters.map(function(letter){
+    return letter.toLowerCase();
+  });
+  for(var i = 0; i < s.length; i++){
+    if(lowerCase[i] === 'a' || lowerCase[i] === 'e' || lowerCase[i] === 'i' || lowerCase[i] === 'o' || lowerCase[i] === 'u'){
+      num = num + '1';
+    } else {
+      num = num + '0';
+    }
+  }
+  return num;
+}
 
 //-Question-
 //-Answer-
