@@ -341,11 +341,24 @@ function boolToWord( bool ){
    return 'No';
   }
 }
-//-Question-
+//-Question-calculate average
+function find_average(array) {
+  // your code here
+  return 0;
+}
+//-Answer-
+function find_average(array) {
+  return array.reduce(function(a,b){ return a + b}) / array.length;
+}
+
+//-Question-remove exclamation mark
+function remove(s){
+  //coding and coding....
+  
+  
+}
 //-Answer-
 
-//-Question-
-//-Answer-
 
 //-Question-
 //-Answer-
