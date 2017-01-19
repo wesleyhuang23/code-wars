@@ -358,6 +358,13 @@ function remove(s){
   
 }
 //-Answer-
+function remove(s){
+  var c = s.split('');
+  if(c[c.length - 1] === '!'){
+    c.splice(c.length - 1, 1);
+  }
+  return c.join('');
+}
 
 
 //-Question-
