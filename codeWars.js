@@ -367,14 +367,55 @@ function remove(s){
 }
 
 
-//-Question-
+//-Question- remove explamation mark not at the end
+function fakeBin(x){
+}
 //-Answer-
+function fakeBin(x){
+  var num = x.split('');
+  for(var i = 0; i < x.length; i++){
+    if(num[i] < 5){
+      num[i] = '0';
+    } else if(num[i] >= 5) {
+      num[i] = '1';
+    }
+  }
+  return num.join('');
+}
 
-//-Question-
+//-Question-great johnny
+function greet(name){
+  
+  if(name === "Johnny"){
+    return "Hello, my love!";
+  } else {
+    return "Hello, " + name + "!";
+  }
+}
 //-Answer-
+function greet(name){
+  
+  if(name === "Johnny"){
+    return "Hello, my love!";
+  } else {
+    return "Hello, " + name + "!";
+  }
+}
 
-//-Question-
+//-Question-find the smallest integer
+var isSquare = function(n){
+  return false; // fix me
+}
 //-Answer-
+var isSquare = function(n){
+  if(n <= -1){
+    return false;
+  } else if (Math.sqrt(n) % 1 === 0){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 //-Question-
 //-Answer-
