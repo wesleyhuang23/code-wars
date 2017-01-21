@@ -417,10 +417,20 @@ var isSquare = function(n){
   }
 }
 
-//-Question-
+//-Question-keep hydrated
+function litres(time) {
+  return 0;
+}
 //-Answer-
+function litres(time) {
+  return Math.floor(time / 2);
+}
 
-//-Question-
+//-Question-Get all array elements except those with specified indexes
+Array.prototype.except = function(keys)
+{
+
+}
 //-Answer-
 
 //-Question-
