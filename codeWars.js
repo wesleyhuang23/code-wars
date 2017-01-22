@@ -441,8 +441,37 @@ function even_or_odd(number) {
   }
 }
 
-//-Question-
+//-Question-Who likes this
+function likes(names) {
+
+}
 //-Answer-
+function likes(names) {
+  var string = '';
+  if(names.length > 3){
+    console.log(names[0]);
+    string = string + names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this';
+    return string;
+  }
+  if(names.length === 0){
+      return 'no one likes this';
+  }
+  for(var i = 0; i < names.length; i++){
+    if(names.length === 1){
+      return names[i] + ' likes this';
+    } else if(i === names.length - 1){
+      string = string + 'and ' + names[i];
+    } else if(names.length === 2){
+      return names[i] + ' and ' + names[i + 1] + ' like this';
+    } else if(i === names.length - 2){
+      string = string + names[i] + ' ';
+    } else {
+      string = string + names[i] + ', ';
+    }
+  }
+  string = string + ' like this'
+  return string;
+}
 
 //-Question-
 //-Answer-
