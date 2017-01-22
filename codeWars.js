@@ -426,12 +426,20 @@ function litres(time) {
   return Math.floor(time / 2);
 }
 
-//-Question-Get all array elements except those with specified indexes
-Array.prototype.except = function(keys)
-{
-
+//-Question-even or odd
+function even_or_odd(number) {
+  // ...
 }
-//-Answer-
+//-Answer-even or odd
+function even_or_odd(number) {
+  if(number === 0){
+   return 'Even';
+  } else if (number % 2 === 0){
+   return 'Even';
+  } else {
+   return 'Odd';
+  }
+}
 
 //-Question-
 //-Answer-
