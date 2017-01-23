@@ -490,11 +490,23 @@ function countChar(string, char) {
   return count;
 }
 
-//-Question-make a box
-function box(){
-  //your code here
+//-Question-all star code challenge #29
+function reverseSentence(str){
+//code here
+
 }
 //-Answer-
+function reverseSentence(str){
+  var arr = [];
+  var words = str.split(' ');
+  for(var i = 0; i < words.length; i++){
+    var char = words[i].split('')
+    char.reverse();
+    arr.push(char.join(''));
+  }
+  return arr.join(' ');
+}
+
 
 //-Question-
 //-Answer-
