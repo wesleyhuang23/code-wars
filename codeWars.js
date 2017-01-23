@@ -508,8 +508,25 @@ function reverseSentence(str){
 }
 
 
-//-Question-
+//-Question-simple bead count
+function countRedBeads(n) {
+  //your code here
+}
 //-Answer-
+function countRedBeads(n) {
+  var red = 0;
+  if(n === 0 || n === 1){
+    return 0;
+  }
+  for(var i = 0; i < n; i++){
+    red = red + 2;
+  }
+  if(n % 2 !== 0){
+    return red - 2;
+  } else {
+    return red;
+  }
+}
 
 //-Question-
 //-Answer-
