@@ -473,10 +473,27 @@ function likes(names) {
   return string;
 }
 
-//-Question-
+//-Question-count the characters
+function countChar(string, char) {
+  // your mission, should you choose to accept it. 
+}
 //-Answer-
+function countChar(string, char) {
+  var letter = char.toLowerCase();
+  var count = 0;
+  var lowerCase = string.toLowerCase().split('');
+  for(var i = 0; i < string.length; i++){
+    if(lowerCase[i] === letter){
+      count = count + 1;
+    }
+  }
+  return count;
+}
 
-//-Question-
+//-Question-make a box
+function box(){
+  //your code here
+}
 //-Answer-
 
 //-Question-
