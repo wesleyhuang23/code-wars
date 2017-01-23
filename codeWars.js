@@ -528,8 +528,29 @@ function countRedBeads(n) {
   }
 }
 
-//-Question-
+//-Question-Longest word
+function longest(words) {
+  return ; //code here
+}
 //-Answer-
+function longest(words) {
+  var longestWord = 0;
+  for(var i = 0; i < words.length; i++){
+    var currentWord = words[i];
+    for(var j = 0; j < words.length; j++){
+      console.log(words[j]);
+      var compare = words[j];
+      if(currentWord.length > compare.length){
+        if(longestWord < currentWord.length){
+          longestWord = currentWord.length;
+        } else {
+          longestWord = longestWord;
+        }
+      }
+    }
+  }
+  return longestWord;
+}
 
 //-Question-
 //-Answer-
