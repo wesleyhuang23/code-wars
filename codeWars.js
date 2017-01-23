@@ -552,8 +552,22 @@ function longest(words) {
   return longestWord;
 }
 
-//-Question-
+//-Question-Bit counting
+var countBits = function(n) {
+
+};
 //-Answer-
+var countBits = function(n) {
+  var count = 0;
+  var bin = Number(n).toString(2);
+  bin.split('');
+  for(var i = 0; i < bin.length; i++){
+    if(bin[i] == 1){
+      count = count + 1;
+    }
+  }
+  return count;
+};
 
 //-Question-
 //-Answer-
