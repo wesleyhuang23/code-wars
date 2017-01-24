@@ -612,8 +612,22 @@ function twoSort(s) {
   }
   return letters.join('');
 }
-//-Question-
+//-Question-bubble sorts
+function bubblesortOnce(intArr) {
+
+}
 //-Answer-
+function bubblesortOnce(intArr) {
+  var num;
+  for(var i = 0; i < intArr.length; i++){
+    if(intArr[i] > intArr[i + 1]){
+      num = intArr[i];
+      intArr[i] = intArr[i + 1];
+      intArr[i + 1] = num;
+    }
+  }
+  return intArr;
+}
 
 //-Question-
 //-Answer-
