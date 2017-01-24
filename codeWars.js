@@ -598,9 +598,20 @@ function arraySum(arr) {
   return total;
 }
 
-//-Question-
+//-Question-sort and star
+function twoSort(s) {
+}
 //-Answer-
-
+function twoSort(s) {
+  s.sort();
+  var letters = s[0].split('');
+  for(var i = 0; i < letters.length; i++){
+    if(i !== letters.length - 1){
+      letters[i] = letters[i] + '***';
+    }
+  }
+  return letters.join('');
+}
 //-Question-
 //-Answer-
 
