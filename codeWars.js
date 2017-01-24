@@ -569,8 +569,34 @@ var countBits = function(n) {
   return count;
 };
 
-//-Question-
+//-Question-Sum all arrays
+function arraySum(arr) {
+  return arr.reduce();
+}
 //-Answer-
+function arraySum(arr) {
+  var total = 0;
+  for(var i = 0; i < arr.length; i++){
+  if(Array.isArray(arr[i])){
+    for(var j = 0; j < arr[i].length; j++){
+      if(Array.isArray(arr[i][j])){
+        for(var x = 0; x < arr[i][j].length; x++){
+          if(Number.isInteger(arr[i][j][x]) || parseInt(arr[i][j][x])){
+            total = total + parseInt(arr[i][j][x]);
+          }
+        }
+      }
+      if(Number.isInteger(arr[i][j]) || parseInt(arr[i][j]) && !Array.isArray(arr[i][j]) ){
+        total = total + parseInt(arr[i][j]);
+      }
+    }
+  }
+    if(!Array.isArray(arr[i]) && parseInt(arr[i])){
+      total = total + Number(arr[i]);
+    }
+  }
+  return total;
+}
 
 //-Question-
 //-Answer-
