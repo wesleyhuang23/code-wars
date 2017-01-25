@@ -629,14 +629,77 @@ function bubblesortOnce(intArr) {
   return intArr;
 }
 
-//-Question-
-//-Answer-
+//-Question-paul miserable score
+function paul(x){
 
-//-Question-
+}
 //-Answer-
+function paul(x){
+  var sum = 0;
+  for(var i = 0; i < x.length; i++){
+    if(x[i] === 'kata'){
+      sum = sum + 5;
+    } else if (x[i] === 'Petes kata'){
+      sum = sum + 10;
+    } else if (x[i] === 'eat'){
+      sum = sum + 1;
+    }
+  }
+  if(sum < 40){
+    return 'Super happy!';
+  } else if(sum < 70 && sum >= 40 ){
+    return 'Happy!';
+  } else if(sum < 100 && sum >= 70){
+    return 'Sad!';
+  } else if(sum >= 100){
+    return 'Miserable!';
+  }
+}
 
-//-Question-
+//-Question-Catagorize new member
+function openOrSenior(data){
+
+}
 //-Answer-
+function openOrSenior(data){
+console.log(data);
+  var output = [];
+  for(var i = 0; i < data.length; i++){
+    if(data[i][0] >= 55 && data[i][1] > 7){
+      output.push('Senior');
+    } else {
+      output.push('Open');
+    }
+  }
+  return output;
+}
+
+//-Question-volume
+var Kata;
+
+Kata = (function() {
+  function Kata() {}
+
+  Kata.getVolumeOfCuboid = function(length, width, height) {
+
+  };
+
+  return Kata;
+
+})();
+//-Answer-
+var Kata;
+
+Kata = (function() {
+  function Kata() {}
+
+  Kata.getVolumeOfCuboid = function(length, width, height) {
+    return length * width * height;
+  };
+
+  return Kata;
+
+})();
 
 //-Question-
 //-Answer-
