@@ -844,8 +844,27 @@ String.prototype.toJadenCase = function () {
   return output.join(' ');
 };
 
-//-Question-
+//-Question-parity outlyer
+function findOutlier(integers){
+
+}
 //-Answer-
+function findOutlier(integers){
+  var evens = [];
+  var odds = [];
+  for(var i = 0; i < integers.length; i++){
+    if(integers[i] % 2 === 0 || integers[i] === 0){
+      evens.push(integers[i]);
+    } else if(integers[i] % 2 !== 0){
+      odds.push(integers[i]);
+    }
+  }
+  if(odds.length > evens.length){
+    return evens[0];
+  } else if(evens.length > odds.length){
+    return odds[0];
+  }
+}
 
 //-Question-
 //-Answer-
