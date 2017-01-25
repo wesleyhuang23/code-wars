@@ -701,8 +701,21 @@ Kata = (function() {
 
 })();
 
-//-Question-
+//-Question-digitize
+function digitize(n) {
+
+}
+
 //-Answer-
+function digitize(n) {
+  var arr = [];
+  var string = n.toString();
+  string.split('');
+  for(var i = 0; i < string.length; i++){
+    arr.unshift(parseInt(string[i]));
+  }
+  return arr;
+}
 
 //-Question-
 //-Answer-
