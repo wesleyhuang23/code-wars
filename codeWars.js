@@ -758,8 +758,44 @@ function sumArray(array) {
   }
 }
 
-//-Question-
+//-Question-sequence sum string
+var SequenceSum = (function() {
+  function SequenceSum() {}
+
+  SequenceSum.showSequence = function(count) {
+
+  };
+
+  return SequenceSum;
+
+})();
 //-Answer-
+var SequenceSum = (function() {
+  function SequenceSum() {}
+
+  SequenceSum.showSequence = function(count) {
+    var sum = '';
+    var total = 0;
+    //zero and negative numbers
+    if(count === 0){
+      return '0=0';
+    } else if(count < 0){
+      return count.toString() + '<0';
+    }
+    for(var i = 0; i <= count; i++){
+      if(i !== count){
+        sum = sum + i + '+';
+      } else {
+        sum =  sum + i; 
+      }
+    }
+    for(var j = 0; j <= count; j++){
+      total = total + j;
+    }
+    return sum + ' = ' + total.toString();
+  };
+
+  return SequenceSum;
 
 //-Question-
 //-Answer-
