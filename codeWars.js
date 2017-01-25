@@ -717,8 +717,46 @@ function digitize(n) {
   return arr;
 }
 
-//-Question-
+//-Question-sum array except low and high
+function sumArray(array) {
+
+}
 //-Answer-
+function sumArray(array) {
+  if(array == null){
+    return 0;
+  } else if(array.length > 1){
+  var high;
+  var low;
+  var sum = 0;
+  for(var i = 0; i < array.length; i++){
+    var currentNum = array[i];
+    for(var j = 0; j < array.length; j++){
+      if(currentNum > array[j]){
+        if(currentNum > high){
+          high = currentNum;
+        } else if(high === undefined){
+          high = currentNum
+        }
+      } else if(currentNum < array[j]){
+        if(currentNum < low){
+          low = currentNum;
+        } else if(low === undefined){
+          low = currentNum;
+        }
+      }
+    }
+  }
+  for(var j = 0; j < array.length; j++){
+    sum = sum + array[j];
+  };
+  return sum - high - low;
+  } else if(array.length === 0){
+    return 0;
+  } else if(array.length === 1){
+    return 0;
+  }
+}
 
 //-Question-
 //-Answer-
