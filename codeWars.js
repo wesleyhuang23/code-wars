@@ -879,8 +879,15 @@ function plural(n) {
   }
 }
 
-//-Question-
+//-Question-remove spaces
+function noSpace(x){
+
+}
 //-Answer-
+function noSpace(x){
+  var arr = x.split(' ');
+  return arr.join('');
+}
 
 //-Question-
 //-Answer-
