@@ -889,8 +889,18 @@ function noSpace(x){
   return arr.join('');
 }
 
-//-Question-
+//-Question- count monkeys
+function monkeyCount(n) {
+
+}
 //-Answer-
+function monkeyCount(n) {
+  var sum = []
+  for(var i = 1; i <= n; i++){
+    sum.push(i);
+  }
+  return sum;
+}
 
 //-Question-
 //-Answer-
