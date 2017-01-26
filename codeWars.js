@@ -902,11 +902,41 @@ function monkeyCount(n) {
   return sum;
 }
 
-//-Question-
-//-Answer-
+//-Question-unique
+function findUniq(arr) {
 
-//-Question-
+}
+
 //-Answer-
+function findUniq(arr) {
+  var num = [];
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] !== arr[i + 1]){
+      num.push(arr[i + 1]);
+    }
+  }
+  if(num[0] !== arr[1]){
+    return num[0];
+  } else {
+    return arr[0];
+  }
+}
+
+
+//-Question-Sum positives
+function positiveSum(arr) {
+  
+}
+//-Answer-
+function positiveSum(arr) {
+  var total = 0;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] > 0){
+      total = total + arr[i];
+    }
+  }
+  return total;
+}
 
 //-Question-
 //-Answer-
