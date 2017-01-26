@@ -866,8 +866,18 @@ function findOutlier(integers){
   }
 }
 
-//-Question-
+//-Question-plural
+function plural(n) {
+
+}
 //-Answer-
+function plural(n) {
+  if(n === 1){
+    return false;
+  } else {
+    return true;
+  }
+}
 
 //-Question-
 //-Answer-
