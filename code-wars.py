@@ -9,8 +9,17 @@ def greet(name):
         return "Hello, %s!" % (name)
 
 
-#-Question-
+#-Question-sum or positive
+def positive_sum(arr):
+    # Your code here
+    return 0
 #-Answer-
+def positive_sum(arr):
+    sum = 0
+    for i in range(0, len(arr)):
+        if arr[i] > 0:
+            sum = sum + arr[i]
+    return sum
 
 #-Question-
 #-Answer-
