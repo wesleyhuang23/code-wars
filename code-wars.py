@@ -21,8 +21,16 @@ def positive_sum(arr):
             sum = sum + arr[i]
     return sum
 
-#-Question-
+#-Question-count the monkey
+def monkey_count(n):
+    #your code here
 #-Answer-
+def monkey_count(n):
+    output = []
+    for i in range(1, n + 1):
+        #cause n is not included in the range
+        output.append(i)
+    return output
 
 #-Question-
 #-Answer-
