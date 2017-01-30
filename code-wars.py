@@ -53,8 +53,15 @@ def show_sequence(n):
     output = output + " = " + str(sum)
     return output
 
-#-Question-
+#-Question-plural
+def plural(n):
 #-Answer-
+def plural(n):
+    if n != 1:
+        return True
+    elif n == 1:
+        return False
+        
 
 #-Question-
 #-Answer-
