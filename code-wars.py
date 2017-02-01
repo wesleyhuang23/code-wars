@@ -86,8 +86,11 @@ def find_average(array):
         return sum / len(array)
     
 
-#-Question-
+#-Question-Covert string to array
+def string_to_array(string):
 #-Answer-
+def string_to_array(string):
+    return string.split(' ')
 
 #-Question-
 #-Answer-
