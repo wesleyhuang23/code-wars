@@ -73,7 +73,18 @@ def even_or_odd(number):
         return "Odd"
 
 #-Question-Calculate average
-
+def find_average(array):
+    
+#-Answer-
+def find_average(array):
+    if len(array) == 0:
+        return 0
+    else:
+        sum = 0
+        for i in range(0, len(array)):
+            sum = sum + array[i]
+        return sum / len(array)
+    
 
 #-Question-
 #-Answer-
