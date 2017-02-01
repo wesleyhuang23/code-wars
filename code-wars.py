@@ -63,11 +63,17 @@ def plural(n):
         return False
         
 
-#-Question-
+#-Question-Even or odd
+def even_or_odd(number):
 #-Answer-
+def even_or_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    elif number % 2 != 0:
+        return "Odd"
 
-#-Question-
-#-Answer-
+#-Question-Calculate average
+
 
 #-Question-
 #-Answer-
