@@ -16,8 +16,14 @@ def positive_sum(arr)
 end
 
 
-#-Question-
+#-Question-Volume of cuboid
+def get_volume_of_cuboid(length, width, height)
+
+end
 #-Answer-
+def get_volume_of_cuboid(length, width, height)
+  return length * width * height
+end
 
 #-Question-
 #-Answer-
