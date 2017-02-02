@@ -101,8 +101,12 @@ def bool_to_word(bool):
     else
         return 'No
 
-#-Question-
+#-Question-volume of cuboid
+def getVolumeOfCubiod(length, width, height):
+    
 #-Answer-
+def getVolumeOfCubiod(length, width, height):
+    return length * height * width
 
 #-Question-
 #-Answer-
