@@ -967,10 +967,12 @@ function sortArray(array) {
       odds.push(array[i])
     }
   }
-  odds.sort()
+  odds.sort(function(a, b){
+    return a - b
+  });
   var count = 0;
   for(var j = 0; j < array.length; j++){
-    if(count === odds.length){
+    if(count === odds.length + 1){
       break
     }
     if(array[j] % 2 != 0){
