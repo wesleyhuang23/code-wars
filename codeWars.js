@@ -992,8 +992,26 @@ function reverse(string){
   return words.reverse().join(' ')
 }
 
-//-Question-
+//-Question-Move zeros to the end
+var moveZeros = function (arr) {
+
+}
 //-Answer-
+var moveZeros = function (arr) {
+  var zero = []
+  var sliced = []
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] !== 0){
+      sliced.push(arr[i])
+    } else if(arr[i] === 0){
+      zero.push(0)
+    }
+  }
+  for(var j = 0; j < zero.length; j++){
+    sliced.push(zero[j]);
+  }
+  return sliced;
+}
 
 //-Question-
 //-Answer-
