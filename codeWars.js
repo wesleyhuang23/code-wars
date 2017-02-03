@@ -938,8 +938,19 @@ function positiveSum(arr) {
   return total;
 }
 
-//-Question-
+//-Question-reverse words in a string
+function reverseWords(str) {
+}
 //-Answer-
+function reverseWords(str) {
+  var output = []
+  var words = str.split(' ');
+  for(var i = 0; i < words.length; i++){
+    var letters = words[i].split('');
+    output.push(letters.reverse().join(''));
+  }
+  return output.join(' ');
+}
 
 //-Question-
 //-Answer-
