@@ -108,8 +108,18 @@ def getVolumeOfCubiod(length, width, height):
 def getVolumeOfCubiod(length, width, height):
     return length * height * width
 
-#-Question-
+#-Question-Reverse words
+def reverse_words(str):
+
 #-Answer-
+def reverse_words(str):
+      output = []
+  words = str.split(' ')
+  for i in range(0, len(words)):
+      letters = list(words[i])
+      letters.reverse()
+      output.append(''.join(letters))
+  return ' '.join(output)
 
 #-Question-
 #-Answer-
