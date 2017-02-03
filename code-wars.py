@@ -121,8 +121,14 @@ def reverse_words(str):
       output.append(''.join(letters))
   return ' '.join(output)
 
-#-Question-
+#-Question-reverse words
+def reverse(st):
+
 #-Answer-
+def reverse(st):
+    words = st.split(' ')
+    words.reverse()
+    return " ".join(words)
 
 #-Question-
 #-Answer-
