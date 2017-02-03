@@ -952,8 +952,34 @@ function reverseWords(str) {
   return output.join(' ');
 }
 
-//-Question-
+//-Question-Sorting odds 
+function sortArray(array) {
+
+}
 //-Answer-
+function sortArray(array) {
+  if(array.length === 0){
+    return []
+  }
+  var odds = []
+  for(var i = 0; i < array.length; i++){
+    if(array[i] % 2 != 0){
+      odds.push(array[i])
+    }
+  }
+  odds.sort()
+  var count = 0;
+  for(var j = 0; j < array.length; j++){
+    if(count === odds.length){
+      break
+    }
+    if(array[j] % 2 != 0){
+      array[j] = odds[count];
+      count += 1;
+    }
+  }
+  return array
+}
 
 //-Question-
 //-Answer-
