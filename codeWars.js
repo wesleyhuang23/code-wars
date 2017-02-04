@@ -1060,8 +1060,31 @@ function toCamelCase(str){
   return words.join('');
 }
 
-//-Question-
+//-Question-Scramblies
+function scramble(str1, str2) {
+
+}
+
 //-Answer-
+function scramble(str1, str2) {
+  var used = [];
+  var letters1 = str1.split('');
+  var letters2 = str2.split('');
+  for(var i = 0; i < str2.length; i++){
+    for(var j = 0; j < letters1.length; j++){  
+      if(letters2[i] === letters1[j]){
+        used.push(letters2[i]);
+        letters1[j] = 0;
+        break;
+      }
+    }
+    if(used.join('') === str2){
+      return true;
+    }
+  }
+  return false;
+}
+
 
 //-Question-
 //-Answer-
