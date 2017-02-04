@@ -1035,8 +1035,13 @@ function firstNonRepeatingLetter(s) {
   return ''
 }
 
-//-Question-
+//-Question-simple multiplication
+function simpleMultiplication(n){
+}
 //-Answer-
+function simpleMultiplication(n){
+   return n % 2 === 0 ? n * 8 : n * 9;
+}
 
 //-Question-
 //-Answer-
