@@ -1013,8 +1013,27 @@ var moveZeros = function (arr) {
   return sliced;
 }
 
-//-Question-
+//-Question-find non repeating letter
+function firstNonRepeatingLetter(s) {
+
+}
 //-Answer-
+function firstNonRepeatingLetter(s) {
+  var letters = s.split('');
+  for(var i= 0; i < letters.length; i++){
+    var count = 0;
+    var current = s[i]
+    for(var j = 0; j < letters.length; j++){
+      if(current.toLowerCase() === s[j].toLowerCase()){
+        count += 1
+      }
+    }
+    if(count === 1){
+      return current;
+    }
+  }
+  return ''
+}
 
 //-Question-
 //-Answer-
