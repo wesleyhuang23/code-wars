@@ -1043,8 +1043,22 @@ function simpleMultiplication(n){
    return n % 2 === 0 ? n * 8 : n * 9;
 }
 
-//-Question-
+//-Question-convert to camel case
+function toCamelCase(str){
+
+}
 //-Answer-
+function toCamelCase(str){
+  console.log(str);
+  var words = str.split('');
+  for(var i = 0; i < words.length; i++){
+    if(words[i] === '-' || words[i] === '_'){
+      words[i + 1] = words[i + 1].toUpperCase();
+      delete words[i]
+    }
+  }
+  return words.join('');
+}
 
 //-Question-
 //-Answer-
