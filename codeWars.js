@@ -1086,8 +1086,20 @@ function scramble(str1, str2) {
 }
 
 
-//-Question-
+//-Question-array diff
+function array_diff(a, b) {
+
+}
 //-Answer-
+function array_diff(a, b) {
+  var arr = [];
+  for(var i = 0; i < a.length; i++){
+    if(a[i] !== b[0]){
+      arr.push(a[i]);
+    }
+  }
+  return arr;
+}
 
 //-Question-
 //-Answer-
