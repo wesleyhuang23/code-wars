@@ -1207,8 +1207,32 @@ function pigIt(str){
   return result.join(' ');
 }
 
-//-Question-
+//-Question-Count the duplicates
+function duplicateCount(text){
+  
+}
 //-Answer-
+function duplicateCount(text){
+  console.log(text);
+  var lower = text.toLowerCase();
+  var duplicates = 0;
+  var char = lower.split('');
+  for(var i  =0 ; i < char.length; i++){
+    var current = char[i];
+    for(var j = 0; j < char.length; j++){
+      if(current === char[j] && j !== i && current !== null){
+        duplicates += 1;
+        for(var x = 0; x < char.length; x++){
+          if(char[x] === current){
+            char[x] = null;
+          }
+        }
+        break;
+      }
+    }
+  }
+  return duplicates;
+}
 
 //-Question-
 //-Answer-
