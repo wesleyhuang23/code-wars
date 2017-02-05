@@ -1162,11 +1162,50 @@ function domainName(url){
   return name.join('');
 }
 
-//-Question-
-//-Answer-
+//-Question-remove zeros
+function removeZeros(array) {
 
-//-Question-
+}
 //-Answer-
+function removeZeros(array) {
+  var count = 0;
+  for(var i = array.length; i > 0; i--){
+    if(array[i] === 0){
+      array.splice(i, 1);
+      count += 1;
+    }
+  }
+  var arr = array;
+  for(var j = arr.length + count; j > arr.length; j--){
+    arr[j] = 0;
+  }
+  for(var x = 0; x < arr.length; x++){
+    if(arr[x] === undefined){
+      arr[x] = 0;
+    }
+  }
+  arr.splice(arr.length - 1, 1);
+  return arr;
+}
+
+//-Question-simple pig latin
+function pigIt(str){
+
+}
+//-Answer-
+function pigIt(str){
+  var result = [];
+  var words = str.split(' ');
+  for(var i = 0; i < words.length; i++){
+    var letters = words[i].split('');
+    var letters1 = letters.slice(1, letters.length);
+    letters1.push(letters[0]);
+    letters1.push('a');
+    letters1.push('y');
+    result.push(letters1.join(''));
+  }
+  return result.join(' ');
+}
 
 //-Question-
 //-Answer-
