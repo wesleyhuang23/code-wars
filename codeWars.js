@@ -1121,7 +1121,46 @@ function solution(string) {
 }
 
 //-Question-
+function domainName(url){
+
+}
 //-Answer-
+function domainName(url){
+  var chars = url.split('');
+  var name = [];
+  var flag = false
+  if(chars[0] !== 'h'){
+    for(var j = 0 ; j < chars.length; j++){
+      if(chars[j] === '.' || (chars[j] === 'w' && chars[j + 1] === 'w')){
+        break
+      }
+      name.push(chars[j]);
+    }
+  }
+  for(var i = 0; i < chars.length; i++){
+    if((chars[i] === 'h' || chars[i] === 't' || chars[i] === 'p' || chars[i] === 's' || chars[i] === ':' || chars[i] === '/' || chars[i] === 'w' || chars[i] === '.') && name.length === 0 && i < 13){
+      if(chars[i] === 'h' && i > 0 && name.length === 0){
+        name.push('h');
+      } else if (chars[i] === 't' && i > 2){
+        name.push('t');
+      } else if (chars[i] === 'p' && i > 3){
+        name.push('p');
+      } else if (chars[i] === 's' && i > 4){
+        name.push('s');
+      } else {
+        chars[i] = 0;
+      }
+    } else if ((chars[i] === '.' || chars[i] !== '/') && !flag && name.length <= 1){
+      flag = true;
+    } else if ((chars[i] === '.' || chars[i] === '/') && flag){
+      flag = false
+    }
+    if(flag){
+      name.push(chars[i]);
+    }
+  }
+  return name.join('');
+}
 
 //-Question-
 //-Answer-
