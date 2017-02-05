@@ -1101,8 +1101,24 @@ function array_diff(a, b) {
   return arr;
 }
 
-//-Question-
+//-Question-no camel casing
+function solution(string) {
+
+}
 //-Answer-
+function solution(string) {
+  var noCamel = []
+  var letters = string.split('');
+  for(var i = 0; i < letters.length; i ++){
+    if(letters[i].toUpperCase() !== letters[i]){
+      noCamel.push(letters[i]);
+    } else if (letters[i].toUpperCase() === letters[i]){
+      noCamel.push(" ");
+      noCamel.push(letters[i]);
+    }
+  }
+  return noCamel.join('');
+}
 
 //-Question-
 //-Answer-
