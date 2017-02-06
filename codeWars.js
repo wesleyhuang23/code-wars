@@ -1234,8 +1234,27 @@ function duplicateCount(text){
   return duplicates;
 }
 
-//-Question-
+//-Question-Adjacent pairs
+function countAdjacentPairs(searchString) {
+
+}
 //-Answer-
+function countAdjacentPairs(searchString) {
+  var words = searchString.toLowerCase().split(' ');
+  var count = 0;
+  for(var i = 0; i < words.length; i++){
+    var current = words[i]
+    if(current === words[i + 1] && words[i] !== 0){
+      count += 1;
+      for(var j = 0; j < words.length; j++){
+        if(words[j] === current) {
+          words[j] = 0
+        }
+      }
+    }
+  }
+  return count;
+}
 
 //-Question-
 //-Answer-
