@@ -39,8 +39,16 @@ def monkey_count(n)
   return str
 end
 
-#-Question-
+#-Question-count chars in string
+def count_char(string, char)
+
+end
 #-Answer-
+def count_char(string, char)
+  char.downcase!
+  lower = string.downcase
+  return lower.count(char)
+end
 
 #-Question-
 #-Answer-
