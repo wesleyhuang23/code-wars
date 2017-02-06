@@ -25,8 +25,19 @@ def get_volume_of_cuboid(length, width, height)
   return length * width * height
 end
 
-#-Question-
+#-Question-count the monkeys
+def monkey_count(n)
+end
 #-Answer-
+def monkey_count(n)
+  str = []
+  i = 1
+  while i <= n
+    str.push(i)
+    i += 1
+  end
+  return str
+end
 
 #-Question-
 #-Answer-
