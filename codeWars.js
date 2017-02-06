@@ -1282,9 +1282,14 @@ function comp(array1, array2){
   return true;
 }
 
-//-Question-
+//-Question-reversed string
+function solution(str){
 
+}
 //-Answer-
+function solution(str){
+  return str.split('').reverse().join('');
+}
 
 //-Question-
 //-Answer-
