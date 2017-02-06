@@ -60,9 +60,14 @@ def reverse(string)
   return words.join(' ')
 end
 
-#-Question-
-#-Answer-
+#-Question-reverse string
+def solution(str)
 
+end
+#-Answer-
+def solution(str)
+  str.reverse
+end
 
 #-Question-
 #-Answer-
