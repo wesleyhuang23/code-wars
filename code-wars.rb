@@ -50,8 +50,15 @@ def count_char(string, char)
   return lower.count(char)
 end
 
-#-Question-
+#-Question-reverse words in string
+def reverse(string)
+end
 #-Answer-
+def reverse(string)
+  words = string.split(' ')
+  words.reverse!
+  return words.join(' ')
+end
 
 #-Question-
 #-Answer-
