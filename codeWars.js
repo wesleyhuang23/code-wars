@@ -1430,8 +1430,32 @@ console.log(this);
   return char.join('');
 }
 
-//-Question-
+//-Question-Where my anagrams at? - 5
+function anagrams(word, words) {
+
+}
 //-Answer-
+function anagrams(word, words) {
+  var anagrams = [];
+  if(word.length === 1){
+    for(var j = 0; j < words.length; j++){
+      if(word === words[j]){
+        anagrams.push(words[j]);
+      }
+    }
+    return anagrams;
+  }
+  var wordSorted = word.split('').sort().join('');
+  var wordsSorted = words.map(function(char){
+    return char.split('').sort().join('');
+  });
+  for(var i = 0; i < wordsSorted.length; i++){
+    if(wordSorted === wordsSorted[i]){
+      anagrams.push(words[i]);
+    }
+  }
+  return anagrams;
+}
 
 //-Question-
 //-Answer-
