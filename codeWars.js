@@ -1320,10 +1320,44 @@ function list(names){
 }
 
 //-Question-
-//-Answer-
+function oddOneOut(str) {
 
-//-Question-
+}
 //-Answer-
+function oddOneOut(str) {
+  var char = str.split('');
+  for(var i = 0; i < char.length; i++){
+    var current = char[i];
+    for(var j = 0; j < char.length; j++){
+      if(i !== j && current === char[j]){
+        char.splice(j, 1);
+        if(j > i){
+          char.splice(i, 1);
+        } else if (i > j){
+          char.splice(i - 1, 1);
+        }
+        i--
+        break;
+      }
+    }
+  }
+  return char;
+}
+
+//-Question-string calculator
+function calculate(string) {
+
+}
+//-Answer-
+function calculate(string) {
+  var final = []
+  var words = string.split(' ');
+  if(words[5] === 'loses'){
+    return Number(words[2]) - Number(words[6]);
+  } else if (words[5] === 'gains'){
+    return Number(words[2]) + Number(words[6]);
+  }
+}
 
 //-Question-
 //-Answer-
