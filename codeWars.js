@@ -1291,8 +1291,33 @@ function solution(str){
   return str.split('').reverse().join('');
 }
 
-//-Question-
+//-Question-format string of names
+function list(names){
+
+}
 //-Answer-
+function list(names){
+  console.log(names);
+  var list = [];
+  var str = '';
+  if(names.length === 0){
+    return str;
+  } else if(names.length === 1){
+    return str + names[0].name;
+  }
+  for(var i = 0; i < names.length; i++){
+    list.push(names[i].name);
+  }
+  for(var i = 0; i < list.length; i++){
+    if(i === (list.length - 2)){
+      str = str + list[i] + ' & ' + list[i+1];
+      break
+    } else {
+      str = str + list[i] + ', '
+    }
+  }
+  return str
+}
 
 //-Question-
 //-Answer-
