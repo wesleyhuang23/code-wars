@@ -1457,8 +1457,28 @@ function anagrams(word, words) {
   return anagrams;
 }
 
-//-Question-
+//-Question-create phone number - kyu 6
+function createPhoneNumber(numbers){
+
+}
 //-Answer-
+function createPhoneNumber(numbers){
+  var phone = '('
+  for(var i = 0; i < numbers.length; i++){
+    if(i < 2){
+      phone = phone + numbers[i];
+    } else if( i === 2){
+      phone = phone + numbers[i] + ') '
+    } else if(i < 4){
+      phone = phone + numbers[i];
+    } else if(i === 5){
+      phone = phone + numbers[i] + '-';
+    } else if (i < 10){
+      phone = phone + numbers[i];
+    }
+  }
+  return phone;
+}
 
 //-Question-
 //-Answer-
