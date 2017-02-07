@@ -1359,8 +1359,27 @@ function calculate(string) {
   }
 }
 
-//-Question-
+//-Question-numerology
+function solution(date){
+
+}
 //-Answer-
+function solution(date){
+  var day = date.toISOString();
+  var total = 0;
+  var char = day.split('');
+  for(var i = 0; i < char.length; i++){
+    if(Number(char[i])){
+      total = total + Number(char[i]);
+    }
+  }
+  if(total > 10){
+    var num = total.toString().split('');
+    return Number(num[0]) + Number(num[1]);
+  } else {
+    return total;
+  }
+}
 
 //-Question-
 //-Answer-
