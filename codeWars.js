@@ -1382,7 +1382,29 @@ function solution(date){
 }
 
 //-Question-
+function count (string) { 
+
+}
 //-Answer-
+function count (string) { 
+  console.log(string);
+  var count = {}
+  var char = string.split('');
+  for(var i = 0; i < char.length; i++){
+    var current = char[i];
+    var num = 0;
+    for(var j = 0; j < char.length; j++){
+      if(current !== 0 && current === char[j]){
+        num = num + 1;
+        char[j] = 0;
+      }
+    }
+    if(current !== 0) {
+      count[current] = num;
+    }
+  }
+  return count;
+}
 
 //-Question-
 //-Answer-
