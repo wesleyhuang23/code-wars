@@ -1406,8 +1406,29 @@ function count (string) {
   return count;
 }
 
-//-Question-
+//-Question- Camel Case method - 6
+String.prototype.camelCase=function(){
+
+}
 //-Answer-
+String.prototype.camelCase=function(){
+console.log(this);
+  let char = this.split('');
+  if(char[char.length - 1] === ' '){
+    char.splice(char.length - 1, 1);
+  } else if(char.length === 0){
+    return '';
+  }
+  char[0] = char[0].toUpperCase();
+  for(let i = 0; i < char.length; i++){
+    if(char[i] === ' ' && char[i + 1]){
+      char[i + 1] = char[i + 1].toUpperCase();
+      char.splice(i, 1);
+      i--
+    }
+  }
+  return char.join('');
+}
 
 //-Question-
 //-Answer-
