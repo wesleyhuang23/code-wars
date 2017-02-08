@@ -1507,8 +1507,33 @@ function rotate(str){
   return reversed;
 }
 
-//-Question-
+//-Question-dubstep - kyu 6
+function songDecoder(song){
+
+}
 //-Answer-
+function songDecoder(song){
+  var lyrics = [];
+  for(var i = 0; i < song.length; i++){
+    if(song.charAt(i) !== 'W' && song.charAt(i + 1) !== 'U' && song.charAt(i + 2) !== 'B'){
+      lyrics.push(song.charAt(i));
+    } else if(song.charAt(i) === 'W' && song.charAt(i + 1) === 'U' && song.charAt(i + 2) === 'B') {
+      i += 2;
+      if(lyrics[lyrics.length - 1] !== ' '){
+        lyrics.push(' ');
+      }
+    } else {
+      lyrics.push(song.charAt(i));
+    }
+  }
+  if(lyrics[lyrics.length - 1] === ' '){
+    lyrics.splice(lyrics.length - 1, 1);
+  }
+  if (lyrics[0] === ' '){
+    lyrics.splice(0, 1);
+  }
+  return lyrics.join('');
+}
 
 //-Question-
 //-Answer-
