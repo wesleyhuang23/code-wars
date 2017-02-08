@@ -1480,8 +1480,32 @@ function createPhoneNumber(numbers){
   return phone;
 }
 
-//-Question-
+//-Question-all star challenge #15 - kyu 6
+function rotate(str){
+
+}
 //-Answer-
+function rotate(str){
+  var reversed = [];
+  var char = str.split('');
+  var previous;
+  for(var i = 0; i < char.length; i++){
+    if(i === 0){
+      reversed.push(char.join(''));
+      previous = char.join('');
+    } else {
+      var action = []
+      var prevChar = previous.split('');
+      action.push(prevChar[previous.length - 1]);
+        for(var j = 0; j < previous.length - 1; j++){
+          action.push(prevChar[j]);
+        }
+      reversed.unshift(action.join(''));
+      previous = action.join('');
+    }
+  }
+  return reversed;
+}
 
 //-Question-
 //-Answer-
