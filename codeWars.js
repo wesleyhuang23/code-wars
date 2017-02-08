@@ -1536,7 +1536,36 @@ function songDecoder(song){
 }
 
 //-Question-
+function findUniq(arr) {
+
+}
 //-Answer-
+function findUniq(arr) {
+  var sorted = []
+  var lower = arr.map(function(str){
+    return str.toLowerCase()
+  });
+  for(var i = 0; i < lower.length; i++){
+    var letters = lower[i].split('');
+    letters.sort();
+    for(var x = 0; x < letters.length; x++){
+      if(letters[x] === ' ' || letters[x] === letters[x + 1]){
+        letters.splice(x, 1);
+        x--
+      }
+    }
+    if(letters.length <= 2){
+      sorted.push(letters[0]);
+    } else {
+      sorted.push(letters[2]);
+    }
+  }
+  for(var j = 0; j < sorted.length; j++){
+    if(sorted[j] !== sorted[j + 1] ){
+      return arr[j + 1];
+    }
+  }
+}
 
 //-Question-
 //-Answer-
