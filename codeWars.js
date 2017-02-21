@@ -1535,7 +1535,7 @@ function songDecoder(song){
   return lyrics.join('');
 }
 
-//-Question-
+//-Question- finding the uniqe string - kyu 5
 function findUniq(arr) {
 
 }
@@ -1567,8 +1567,13 @@ function findUniq(arr) {
   }
 }
 
-//-Question-
+//-Question-Reverse Words
+function reverseWords(str){
+}
 //-Answer-
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ');
+}
 
 //-Question-
 //-Answer-
