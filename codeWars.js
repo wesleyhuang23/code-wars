@@ -1575,8 +1575,26 @@ function reverseWords(str){
   return str.split(' ').reverse().join(' ');
 }
 
-//-Question-
+//-Question-kyu 6 find the odd int
+function findOdd(A) {
+}
 //-Answer-
+function findOdd(A) {
+  let count = 0;
+  for(let i = 0; i < A.length; i++){
+    let current = A[i];
+    for(let j = 0 ; j < A.length; j++){
+      if(current === A[j]){
+        count = count + 1;
+      }
+    }
+    if(count % 2 !== 0){
+      return current;
+    } else {
+      count = 0;
+    }
+  }
+}
 
 //-Question-
 //-Answer-
