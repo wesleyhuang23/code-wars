@@ -1615,8 +1615,26 @@ function divisors(integer) {
   }
 };
 
-//-Question-
+//-Question- replace with alphabet kyu 6
+function alphabetPosition(text) {
+
+}
 //-Answer-
+function alphabetPosition(text) {
+  let string = [];
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  var lower = text.toLowerCase().split('');
+  for(let i = 0; i < text.length; i++){
+    string.push(alphabet.indexOf(lower[i]) + 1);
+  }
+  for(let j = 0; j < string.length; j++){
+    if(string[j] === 0){
+      string.splice(j, 1);
+      j--;
+    }
+  }
+  return string.join(' ');
+}
 
 //-Question-
 //-Answer-
