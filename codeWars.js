@@ -1596,8 +1596,24 @@ function findOdd(A) {
   }
 }
 
-//-Question-
+//-Question- find the divisors! kyu 6
+function divisors(integer) {
+
+};
 //-Answer-
+function divisors(integer) {
+  let divisors = []
+  for(let i = 2; i < integer; i++){
+    if(integer % i === 0){
+      divisors.push(i);
+    }
+  }
+  if(divisors.length === 0){
+    return integer.toString() + ' is prime';
+  } else {
+    return divisors;
+  }
+};
 
 //-Question-
 //-Answer-
