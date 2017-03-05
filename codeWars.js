@@ -1636,8 +1636,19 @@ function alphabetPosition(text) {
   return string.join(' ');
 }
 
-//-Question-
+//-Question-is valid walk kyu 6
+function isValidWalk(walk) {
+}
 //-Answer-
+function isValidWalk(walk) {
+  var count = 0;
+  for(var i = 0; i < walk.length; i++){
+    if(walk[i] !== walk[i + 1]){
+      count = count + 1;
+    }
+  }
+  return count === 10 ? true : false;
+}
 
 //-Question-
 //-Answer-
