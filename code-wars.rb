@@ -78,8 +78,23 @@ def solution(sentence)
   return sentence.split(' ').reverse.join(' ');
 end
 
-#-Question-
+#-Question-valid walk ruby kyu 6
+def isValidWalk(walk)
+
+end
 #-Answer-
+def isValidWalk(walk)
+  count = 0;
+  i = 0;
+  while i < walk.length
+    if(walk[i] != walk[i + 1])
+      count += 1
+    end
+    i += 1
+  end
+  
+  return count == 10 ? true : false
+end
 
 #-Question-
 #-Answer-
