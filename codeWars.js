@@ -1665,8 +1665,33 @@ var uniqueInOrder=function(iterable){
   return arr;
 }
 
-//-Question-
+//-Question- Valid Parens Kyu 5
+function validParentheses(parens){
+
+}
 //-Answer-
+function validParentheses(parens){
+  var single = parens.split('');
+  if(single.length % 2 !== 0){
+    return false;
+  }
+  var left = [];
+  var right = [];
+  for(var i = 0; i < single.length; i++){
+    if(single[i] === '('){
+      right.push(single[i]);
+    } else if(single[i] === ')'){
+      left.push(single[i]);
+    }
+  }
+  if(single[0] === ')' || single[single.length - 1] === '('){
+    return false;
+  }else if(left.length === right.length){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 //-Question-
 //-Answer-
