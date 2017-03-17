@@ -1734,8 +1734,26 @@ function incrementString (string) {
   }
 }
 
-//-Question-
+//-Question- Change to time formate kyu 5
+function solution(hour) {
+
+}
 //-Answer-
+function solution(hour) {
+  var result = [];
+  var str = hour.toString().split('');
+  if(str.length === 3 || str.length === 4){
+    for(var i = str.length - 1; i >= 0; i--){
+      result.unshift(str[i])
+      if(result.length === 2){
+        result.unshift(':');
+      }
+    }
+    return result.join('');
+  } else {
+    throw 'not the proper format';
+  }
+}
 
 //-Question-
 //-Answer-
