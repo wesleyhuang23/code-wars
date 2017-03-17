@@ -1693,8 +1693,46 @@ function validParentheses(parens){
   }
 }
 
-//-Question-
+//-Question- incrementString kyu 5
+function incrementString (string) {
+
+}
 //-Answer-
+function incrementString (string) {
+  var numbers = [];
+  var letters = [];
+  var char = string.split('');
+  for(var i = 0; i < char.length; i++){
+    if(Number.isInteger(Number(char[i]))){
+      numbers.push(char[i]);
+    } else {
+      letters.push(char[i]);
+    }
+  }
+  if(numbers.length === 0){
+    return string + '1';
+  }else if(numbers.length === 1){
+    var result = Number(numbers[0]) + 1
+    return letters.join('') + result.toString();
+  } else if(numbers.length > 1){
+    var results = Number(numbers.join('')) + 1;
+    var newNums = results.toString().split('');
+    if(newNums.length < numbers.length){
+      var count = newNums.length - 1;
+      for(var j = numbers.length - 1; j >= 0; j--){
+          if(count >= 0){
+            numbers[j] = newNums[count]
+            count -= 1;
+          }
+      }
+      return letters.join('') + numbers.join('')
+    } else if(newNums.length === numbers.length){
+      return letters.join('') + newNums.join('');
+    } else if(newNums.length > numbers.length){
+      return letters.join('') + newNums.join('');
+    }
+  }
+}
 
 //-Question-
 //-Answer-
