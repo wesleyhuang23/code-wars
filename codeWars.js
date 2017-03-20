@@ -1755,14 +1755,92 @@ function solution(hour) {
   }
 }
 
-//-Question-
+//-Question- powerSumDigTerm kyu 5
+function powerSumDigTerm(n) {
+
+}
 //-Answer-
+function powerSumDigTerm(n) {
+    var count = 0;
+    var result
+    for(var i = 81; i > 0 ;i++){
+      var sum = 0;
+      var nums = i.toString().split('');
+        for(var j = 0; j < nums.length; j++){
+          sum = Number(nums[j]) + sum
+        }
+      for(var x = 0; x <= nums.length; x++){
+        if(Math.pow(sum, x) === i){
+          count += 1;
+          result = i;
+        }
+      }
+      if(count === n){
+        return result;
+      }
+    }
+}
 
 //-Question-
 //-Answer-
+function validBraces(braces){
+    var chars = braces.split('');
+    var count = 0;
+    for(var i = 0; i < chars.length; i++){
+        if(chars[i] === '('){
+            count += 1;
+        } else if(chars[i] === ')'){
+            count -= 1;
+        } else if(chars[i] === '['){
+            count += 1;
+        } else if(chars[i] === ']'){
+            count -= 1;
+        } else if(chars[i] === '{'){
+            count += 1;
+        } else if(chars[i] === '}'){
+            count -= 1;
+        }
+    }
+    if(chars[0] === '(' && chars[chars.length - 1] !== ')' && count !== 0){
+      return false;
+    } else if(true){
 
-//-Question-
+    } else if(chars[0] === '(' && chars[chars.length - 1] === ')' && count === 0) { 
+      return true;
+    } else if(chars[0] === '{' && chars[chars.length - 1] !== '}'){
+      return false;
+    } else if(chars[0] === '{' && chars[chars.length - 1] === '}'){
+      return true;
+    } else if(chars[0] === '[' && chars[chars.length - 1] !== ']'){
+      return false;
+    } else if(chars[0] === '[' && chars[chars.length - 1] === ']'){
+      return true;
+    } else if(chars[0] === '(' && chars[chars.length - 1] === '}'){
+      return false;
+    } else if(count !== 0){
+      return false;
+    } else if(count === 0){
+      return true;
+    }
+}
+
+//-Question-has unique chars kyu 7
+function hasUniqueChars(str){
+
+}
 //-Answer-
+function hasUniqueChars(str){
+  var chars = str.split('');
+  for(var i = 0; i < chars.length; i++){
+    var current = chars[i];
+    for(var j = 0; j < chars.length; j++){
+      if(current === chars[j] && j !== i){
+        return false;
+      }
+    }
+  }
+  return true;
+}
 
 //-Question-
 //-Answer-
