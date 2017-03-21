@@ -1842,8 +1842,28 @@ function hasUniqueChars(str){
   return true;
 }
 
-//-Question-
+//-Question-IQ test Kyu 6
+function iqTest(numbers){
+
+}
 //-Answer-
+function iqTest(numbers){
+  var nums = numbers.split(' ');
+  var even = [];
+  var odd = [];
+  for(var i = 0; i < nums.length; i++){
+    if(Number(nums[i]) % 2 === 0){
+      even.push(Number(nums[i]))
+    } else if (Number(nums[i]) % 2 !== 0){
+      odd.push(Number(nums[i]))
+    }
+  }
+  if(odd.length < even.length){
+    return nums.indexOf(odd[0].toString()) + 1;
+  } else if( odd.length > even.length){
+    return nums.indexOf(even[0].toString()) + 1;
+  }
+}
 
 //-Question-
 //-Answer-
