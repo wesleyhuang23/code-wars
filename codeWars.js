@@ -1865,8 +1865,26 @@ function iqTest(numbers){
   }
 }
 
-//-Question-
+//-Question- is prime kyu 6
+function isPrime(num) {
+
+}
+
 //-Answer-
+function isPrime(num) {
+  if(num <= 1){
+    return false;
+  } else if (num === 2 || num === 3){
+    return true;
+  }
+  for(var i = 2; i < num; i++){
+    if(num % i === 0){
+      return false;
+    }
+  }
+  return true;
+}
+
 
 //-Question-
 //-Answer-
