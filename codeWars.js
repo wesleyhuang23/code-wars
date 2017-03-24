@@ -1931,8 +1931,25 @@ function expandedForm(num) {
 }
 
 
-//-Question-
+//-Question-Expanded form part 1 kyu 6
+function expandedForm(num) {
+
+}
 //-Answer-
+function expandedForm(num) {
+  var result = [];
+  var position = '';
+  var numStr = num.toString();
+  for(var i = numStr.length - 1; i >= 0; i--){
+    if(numStr[i] === '0'){
+      position = position + '0'
+    } else {
+      result.unshift(numStr[i] + position);
+      position = position + '0'
+    }
+  }
+  return result.join(' + ');
+}
 
 //-Question-
 //-Answer-
