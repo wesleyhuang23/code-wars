@@ -1951,8 +1951,50 @@ function expandedForm(num) {
   return result.join(' + ');
 }
 
-//-Question-
+//-Question-isPrime kyu 5
+function isPrime(number) {
+
+}
 //-Answer-
+function isPrime(number) {
+  if(number <= 1){
+    return false;
+  }
+  for(let i = 2; i < number; i++){
+    if(number % i === 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+function getPrimes(start, finish) {
+  let primes = [];
+  if(start === 0 && finish === 0){
+    return primes;
+  } else if(start > finish){
+    var first = start
+    start = finish;
+    finish = first;
+  }
+  for(var j = start; j <= finish; j++){
+    var current = j;
+    var count = true;
+    if(current === 1 || current === 0){
+      count = false;
+    }
+    for(var x = 2; x < current; x++){
+      if(current % x === 0){
+        count = false
+        break;
+      }
+    }
+    if(count === true){
+      primes.push(current);
+    }
+  }
+  return primes
+}
 
 //-Question-
 //-Answer-
