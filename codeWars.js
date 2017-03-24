@@ -1886,8 +1886,50 @@ function isPrime(num) {
 }
 
 
-//-Question-
+//-Question- expandedForm kyu 6
+function expandedForm(num) {
+
+}
+
 //-Answer-
+function expandedForm(num) {
+  var before = '';
+  var str = [];
+  var numStr = num.toString();
+  var dec = false;
+  var intZero = '';
+  var zero = '10';
+  for(var j = 0; j < numStr.length; j++){
+    if(numStr[j] === '.'){
+      break;
+    }
+    before = before + numStr[j];
+  }
+  if(before !== '0'){
+    for(var x = before.length - 1; x >= 0; x--){
+      str.unshift(before[x] + intZero);
+      intZero = intZero + '0';
+    }
+  }
+  for(var i = 0; i < numStr.length; i++){
+    if(numStr[i] === '.'){
+      dec = true;
+    } else if(dec && numStr[i] !== '0'){
+      str.push(numStr[i] + '/' + zero)
+      zero = zero + '0'
+    } else if(dec && numStr[i] === '0'){
+      zero = zero + '0'
+    }
+  }
+  for(var b = 0; b < str.length; b++){
+    if(str[b] === '0'){
+      str.splice(b, 1);
+      b--
+    }
+  }
+  return str.join(' + ');
+}
+
 
 //-Question-
 //-Answer-
