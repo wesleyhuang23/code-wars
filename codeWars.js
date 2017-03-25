@@ -2236,8 +2236,34 @@ function disemvowel(str) {
   return words.join('');
 }
 
-//-Question-
+//-Question-dashitize kyu 6
+function dashatize(num) {
+};
 //-Answer-
+function dashatize(num) {
+  if(num % 1 !== 0){
+    return 'NaN';
+  } else if(num < 0){
+    num = Math.abs(num);
+  }
+  let result = '';
+  let strNum = num.toString();
+  for(let i = 0; i < strNum.length; i++){
+    if(Number(strNum[i]) % 2 !== 0 && i !== 0){
+      result = result + '-';
+      result = result + strNum[i];
+    } else {
+      if(Number(strNum[i - 1]) % 2 !== 0){
+        result = result + '-';
+      }
+      result = result + strNum[i];
+    }
+  }
+  if(result[0] === '-'){
+    result = result.split('').splice(1, result.length - 1).join('');
+  }
+  return result;
+};
 
 //-Question-
 //-Answer-
