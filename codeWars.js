@@ -2166,11 +2166,46 @@ function allContinents(list) {
   return true;
 }
 
-//-Question-
-//-Answer-
+//-Question-split camelCase kyu 7
+function splitter(str){
 
-//-Question-
+}
 //-Answer-
+function splitter(str){
+  let result = [];
+    for(let i = 0; i < str.length; i++){
+      if(str[i] === str[i] .toUpperCase() && Number(str[i]) % 1 !== 0){
+        if(str[i] !== ' '){
+          if(str[i - 1] !== ' '){
+            result.push(' ');
+          }
+          result.push(str[i]);
+        }
+      } else {
+        result.push(str[i]);
+      }
+    }
+    if(result[0] === ' '){
+      result.splice(0, 1);
+    }
+    return result.join('');
+}
+
+//-Question- remove exclamation mark kyu 8
+function removeExclamationMarks(s) {
+ 
+}
+//-Answer-
+function removeExclamationMarks(s) {
+  let char = s.split('');
+  for(let i = 0; i < char.length; i++){
+    if(char[i] === '!'){
+      char.splice(i, 1);
+      i--;
+    }
+  }
+  return char.join('');
+}
 
 //-Question-
 //-Answer-
