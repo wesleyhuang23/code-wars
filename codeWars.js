@@ -2130,8 +2130,41 @@ function solution(){
 }
 
 
-//-Question-
+//-Question- allContinents kyu 6
+function allContinents(list) {
+
+}
 //-Answer-
+function allContinents(list) {
+  var continents = {
+    Africa: false,
+    Americas: false,
+    Asia: false,
+    Europe: false,
+    Oceania: false
+  }
+    
+  for(var i = 0; i < list.length; i++){
+    if(list[i].continent === 'Africa'){
+      continents.Africa = true;
+    } else if (list[i].continent === 'Americas'){
+      continents.Americas = true;
+    } else if (list[i].continent === 'Asia'){
+      continents.Asia = true;
+    } else if (list[i].continent === 'Europe'){
+      continents.Europe = true;
+    } else if (list[i].continent === 'Oceania'){
+      continents.Oceania = true;
+    }
+  }
+  
+  for(let j in continents){
+    if(continents[j] === false){
+      return false;
+    }
+  }
+  return true;
+}
 
 //-Question-
 //-Answer-
