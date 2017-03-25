@@ -2068,11 +2068,44 @@ function order(words){
   return result.join(' ');
 }
 
-//-Question-
+//-Question- kebabize kyu 6
+function kebabize(str) {
+}
 //-Answer-
+function kebabize(str) {
+  let result = [];
+  for(let i = 0; i < str.length; i++){
+    if(str[i] === str[i].toUpperCase() && Number(str[i]) % 1 !== 0 && result.length > 0){
+      result.push('-');
+      result.push(str[i].toLowerCase());
+    } else if(Number(str[i]) % 1 === 0 || str[i] === '-'){
+      continue;
+    } else {
+      result.push(str[i].toLowerCase());
+    }
+  }
+  return result.join('');
+}
 
-//-Question-
+//-Question- find seniors kyu 6
+function findSenior(list) {
+
+}
 //-Answer-
+function findSenior(list) {
+  let ages = [];
+  let seniors = [];
+  for(let i = 0; i < list.length; i++){
+    ages.push(list[i].age);
+  }
+  ages.sort();
+  for(let j = 0; j < list.length; j++){
+    if(list[j].age === ages[ages.length - 1]){
+      seniors.push(list[j]);
+    }
+  }
+  return seniors;
+}
 
 //-Question-
 //-Answer-
