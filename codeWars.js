@@ -1997,10 +1997,76 @@ function getPrimes(start, finish) {
 }
 
 //-Question-
-//-Answer-
+function nextBigger(n){
 
-//-Question-
+}
 //-Answer-
+function nextBigger(n){
+  var obj = {}
+  var numStr = n.toString();
+  var pass = false;
+  for(var i = numStr.length - 1; i >= 0; i--){
+    if(numStr[i] > numStr[i - 1]){
+      pass = true;
+      obj[numStr[i]] = numStr[i];
+    } else {
+      obj[numStr[i]] = numStr[i];
+    }
+    if(!pass){
+      return -1
+    }
+  }
+  var count = numStr.length;
+  var theNum;
+  i = n + 1;
+  while(count !== 0){
+    var dup = {}
+    count = numStr.length;
+    var compare = numStr.split('').sort();   
+    var test = i.toString().split('').sort();
+    for(var x = 0; x < test.length; x++){
+      if(!dup[test[x]]){
+        dup[test[x]] = 1
+      } else {
+        i++;
+        test = i.toString().split('');
+        break;
+      }
+    }
+    for(var j = 0; j < test.length; j++){
+      if(obj[test[j]]){
+        count--
+      }
+    }
+    i++
+    theNum = i - 1;
+  }
+  return theNum;
+}
+
+//-Question-Your order please kyu 6
+function order(words){
+
+}
+//-Answer-
+function order(words){
+  let obj = {};
+  let result = [];
+  var word = words.split(' ');
+  for(let i = 0 ; i < word.length; i++){
+    let current = word[i];
+    for(let j = 0; j < current.length; j++){
+      if(parseInt(current[j]) % 1 === 0){
+        obj[current[j]] = current;
+        break;
+      }
+    }
+  }
+  for(let x in obj){
+    result.push(obj[x]);
+  }
+  return result.join(' ');
+}
 
 //-Question-
 //-Answer-
