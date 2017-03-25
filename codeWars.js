@@ -2220,8 +2220,21 @@ function highAndLow(numbers){
   return result + num[num.length - 1] + ' ' +  num[0]; 
 }
 
-//-Question-
+//-Question- disemvowel trolls kyu 7
+function disemvowel(str) {
+
+}
 //-Answer-
+function disemvowel(str) {
+  let words = str.split('');
+  for(let i = 0; i < words.length; i++){
+    if(words[i].toLowerCase() === 'a' || words[i].toLowerCase() === 'e' || words[i].toLowerCase() === 'i' || words[i].toLowerCase() === 'u' || words[i].toLowerCase() === 'o'){
+      words.splice(i, 1);
+      i--;
+    }
+  }
+  return words.join('');
+}
 
 //-Question-
 //-Answer-
