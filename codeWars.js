@@ -2207,8 +2207,18 @@ function removeExclamationMarks(s) {
   return char.join('');
 }
 
-//-Question-
+//-Question-high and low kyu 7
+function highAndLow(numbers){
+
+}
 //-Answer-
+function highAndLow(numbers){
+  let num = numbers.split(' ').sort(function(a, b){
+      return a - b;
+    });
+  let result = '';
+  return result + num[num.length - 1] + ' ' +  num[0]; 
+}
 
 //-Question-
 //-Answer-
