@@ -2107,8 +2107,28 @@ function findSenior(list) {
   return seniors;
 }
 
-//-Question-
+//-Question- duplicate arguments kyu 6
+function solution(){
+
+}
+
 //-Answer-
+function solution(){
+  let values = [];
+  let obj = {};
+  for(let i in arguments){
+    values.push(arguments[i]);
+  }
+  for(let j = 0 ; j < values.length; j++){
+    if(!obj[values[j]]){
+      obj[values[j]] = 1;
+    } else {
+      return true;
+    }
+  }
+  return false;
+}
+
 
 //-Question-
 //-Answer-
