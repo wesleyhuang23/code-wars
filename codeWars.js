@@ -2265,8 +2265,22 @@ function dashatize(num) {
   return result;
 };
 
-//-Question-
+//-Question- elimination kyu 7
+function elimination(arr){
+
+}
 //-Answer-
+function elimination(arr){
+  let obj  ={};
+  for(let i  =0; i < arr.length; i++){
+    if(!obj[arr[i]]){
+      obj[arr[i]] = 1;
+    } else {
+      return arr[i]
+    }
+  }
+  return null;
+}
 
 //-Question-
 //-Answer-
