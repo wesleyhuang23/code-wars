@@ -2282,8 +2282,22 @@ function elimination(arr){
   return null;
 }
 
-//-Question-
+//-Question-multiples of 3 and 5 kyu 6
+function solution(number){
+
+}
 //-Answer-
+function solution(number){
+  let sum = 0;
+  for(let i = 0; i < number; i++){
+    if(i % 3 === 0){
+      sum = sum + i
+    } else if (i % 5 === 0){
+      sum = sum + i;
+    }
+  }
+  return sum;
+}
 
 //-Question-
 //-Answer-
