@@ -2315,8 +2315,18 @@ function addArrays(array1, array2) {
   return result;
 }
 
-//-Question-
+//-Question- spam kyu 7
+function spam(number){
+
+}
 //-Answer-
+function spam(number){
+  let result = '';
+  for(let i = 0; i < number; i++){
+    result = result + 'hue';
+  }
+  return result;
+}
 
 //-Question-
 //-Answer-
