@@ -2299,8 +2299,21 @@ function solution(number){
   return sum;
 }
 
-//-Question-
+//-Question- allstar code challenge 20 kyu 7
+function addArrays(array1, array2) {
+
+}
 //-Answer-
+function addArrays(array1, array2) {
+  if(array1.length !== array2.length){
+    throw 'will not work'
+  }
+  let result = [];
+  for(let i = 0; i < array1.length; i++){
+    result.push(array1[i] + array2[i]);
+  }
+  return result;
+}
 
 //-Question-
 //-Answer-
