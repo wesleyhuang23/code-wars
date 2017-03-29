@@ -2403,8 +2403,18 @@ function describeList(x) {
   }
 }
 
-//-Question-
+//-Question-reverse and array kyu 6
+function reverse(arr) {
+
+}
 //-Answer-
+function reverse(arr) {
+   let result = [];
+   for(let i = arr.length - 1; i >= 0 ;i--){
+     result.push(arr[i]);
+   }
+   return result;
+}
 
 //-Question-
 //-Answer-
