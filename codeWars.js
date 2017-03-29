@@ -2328,11 +2328,44 @@ function spam(number){
   return result;
 }
 
-//-Question-
-//-Answer-
+//-Question-FizzBuzz kyu 7
+function fizzbuzz(n){
 
-//-Question-
+}
+
 //-Answer-
+function fizzbuzz(n){
+  let result = [];
+  for(let i = 1; i <= n; i++){
+    if(i % 3 === 0){
+      result.push('Fizz');
+    } else if(i % 5 === 0){
+      result.push('Buzz');
+    } else if(i % 3 === 0 && i % 5 === 0){
+      result.push('FizzBuzz');
+    } else {
+      result.push(i);
+    }
+  }
+  return result;
+}
+
+
+//-Question- getNumbers from string kyu 8
+function getNumberFromString(s) {
+
+}
+//-Answer-
+function getNumberFromString(s) {
+  let result = [];
+  let chars = s.split('');
+  for(let i = 0; i < chars.length; i++){
+    if(Number(chars[i]) % 1 === 0 && chars[i] !== ' '){
+      result.push(chars[i]);
+    }
+  }
+  return Number(result.join(''));
+}
 
 //-Question-
 //-Answer-
