@@ -2388,8 +2388,20 @@ function validateHello(greetings) {
   return false;
 }
 
-//-Question-
+//-Question- describe list kyu 7
+function describeList(x) {
+
+}
 //-Answer-
+function describeList(x) {
+  if(x.length === 0){
+    return 'empty'
+  } else if(x.length === 1){
+    return 'singleton';
+  } else if (x.length > 1){
+    return 'longer';
+  }
+}
 
 //-Question-
 //-Answer-
