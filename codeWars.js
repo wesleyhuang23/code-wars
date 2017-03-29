@@ -2367,8 +2367,26 @@ function getNumberFromString(s) {
   return Number(result.join(''));
 }
 
-//-Question-
+//-Question- validate hello kyu 8
+function validateHello(greetings) {
+
+}
 //-Answer-
+function validateHello(greetings) {
+  let obj = {
+    hello: 'english',
+    ciao: 'italian',
+    salut: 'french',
+    hallo: 'german',
+    hola: 'spanish',
+    ahoj: 'czech',
+    czesc: 'polish',
+  }
+  if(obj[greetings]){
+    return true;
+  }
+  return false;
+}
 
 //-Question-
 //-Answer-
