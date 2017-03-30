@@ -2448,8 +2448,36 @@ function stringTransformer(str) {
   return result.join(' ');
 }
 
-//-Question-
+//-Question- reverse vowel kyu 6
+function reverseVowels(str) {
+
+}
 //-Answer-
+function reverseVowels(str) {
+  let chars = str.split('');
+  let vowels = [];
+  let count = 0;
+  let obj = {
+    'a': 1,
+    'e': 1,
+    'i': 1,
+    'o': 1,
+    'u': 1
+  }
+  for(let i = 0; i < chars.length; i++){
+    if(obj[chars[i].toLowerCase()]){
+      vowels.unshift(chars[i]);
+      chars[i] = null
+    }
+  }
+  for(let j = 0; j < chars.length; j++){
+    if(chars[j] === null){
+      chars[j] = vowels[count];
+      count++;
+    }
+  }
+  return chars.join('');
+}
 
 //-Question-
 //-Answer-
