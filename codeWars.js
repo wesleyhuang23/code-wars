@@ -2416,8 +2416,37 @@ function reverse(arr) {
    return result;
 }
 
-//-Question-
+//-Question- String Transformer kyu 6
+function stringTransformer(str) {
+
+}
 //-Answer-
+function stringTransformer(str) {
+  let words = str.split(' ');
+  let result = [];
+  for(let i = 0; i < words.length; i++){
+    let currentWord = words[i].split('');
+    if(words[i] == ''){
+      result.unshift('');
+    }
+    for(let j = 0; j < currentWord.length; j++){
+      if(currentWord[j] === currentWord[j].toUpperCase()){
+        currentWord[j] = currentWord[j].toLowerCase();
+        if(j === currentWord.length - 1){
+          result.unshift(currentWord.join(''));
+        }
+        continue
+      } else if(currentWord[j] === currentWord[j].toLowerCase()){
+        currentWord[j] = currentWord[j].toUpperCase();
+        if(j === currentWord.length - 1){
+          result.unshift(currentWord.join(''));
+        }
+        continue
+      }
+    }
+  }
+  return result.join(' ');
+}
 
 //-Question-
 //-Answer-
