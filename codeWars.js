@@ -2555,8 +2555,32 @@ function sumConsecutives(s) {
   return result;
 }
 
-//-Question-
+//-Question- Split Strings Kyu 6
+function solution(str){
+
+}
 //-Answer-
+function solution(str){
+  let char = str.split('');
+  let result = [];
+  let count = 0;
+  let x = 0;
+  for(let i = 0; i < char.length; i++){
+    if(count === 0){
+      result[x] = '';
+    }
+    result[x] = result[x] + char[i];
+    count++
+    if(count === 2){
+      count = 0;
+      x++
+    }
+  }
+  if((char.length - 1) % 2 === 0){
+    result[result.length - 1] = result[result.length - 1] + '_';
+  }
+  return result
+}
 
 //-Question-
 //-Answer-
