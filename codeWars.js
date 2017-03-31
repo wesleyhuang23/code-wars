@@ -2582,8 +2582,17 @@ function solution(str){
   return result
 }
 
-//-Question-
+//-Question- remove first and last char kyu 7
+function removeChar(str){
+ 
+};
 //-Answer-
+function removeChar(str){
+  let letters = str.split('');
+  letters.splice(letters.length - 1, 1);
+  letters.splice(0, 1);
+  return letters.join('');
+};
 
 //-Question-
 //-Answer-
