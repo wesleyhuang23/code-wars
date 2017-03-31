@@ -2479,11 +2479,81 @@ function reverseVowels(str) {
   return chars.join('');
 }
 
-//-Question-
-//-Answer-
+//-Question- oddOne Out kyu 6
+function oddOneOut(str) {
 
-//-Question-
+}
 //-Answer-
+function oddOneOut(str) {
+  let chars = str.split('');
+  for(let i = 0; i < chars.length; i++){
+    let current = chars[i];
+    for(let j = 0; j < chars.length; j++){
+      if(current === chars[j] && i !== j){
+        chars.splice(j, 1);
+        chars.splice(i, 1);
+        i--
+        break;
+      }
+    }
+  }
+  return chars;
+}
+//efficient version
+function oddOneOut(str) {
+  let chars = str.split('');
+  let obj = {};
+  for(let i = 0; i < chars.length; i++){
+    if(!obj[chars[i]]){
+      obj[chars[i]] = 1;
+    } else {
+      obj[chars[i]] = obj[chars[i]] + 1;
+    }
+  }
+  for(let j in obj){
+    if(obj[j] % 2 === 0){
+      for(let x = 0; x < chars.length; x++){
+        if(chars[x] === j && obj[j] !== 1){
+          chars.splice(x, 1);
+          x--;
+        }
+      }
+    } else if(obj[j] % 2 !== 0 && obj[j] !== 1){
+      let count = 0;
+      for(let a = 0; a < chars.length; a++){
+        if(count < obj[j] - 1){
+          if(chars[a] === j){
+            chars.splice(a, 1);
+            a--;
+            count++
+          }
+        }
+      }
+    }
+  }
+  return chars;
+}
+
+//-Question- sumConsecutives kyu 6
+function sumConsecutives(s) {
+
+}
+//-Answer-
+function sumConsecutives(s) {
+  let result = [];
+  let sum = 0;
+  for(let i = 0; i < s.length; i++){
+    if(s[i] === s[i + 1]){
+      sum = sum + s[i]
+    } else if(s[i] !== s[i + 1] && sum !== 0) {
+      result.push(sum + s[i]);
+      sum = 0;
+    } else{
+      result.push(s[i]);
+    }
+  }
+  return result;
+}
 
 //-Question-
 //-Answer-
