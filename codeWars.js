@@ -2623,7 +2623,33 @@ var max = function(list){
 }
 
 //-Question-
+function solution(list){
+
+}
 //-Answer-
+function solution(list){
+ let result  = '';
+ let dash = false;
+ for(let i = 0; i < list.length; i++){
+   if(i === 0 && list[i + 1] - list[i] === 1 && list[i + 2] - list[i + 1] === 1 && !dash){  
+     result = result + list[i] + '-'
+     dash = true;
+   } else if(i === 0){
+     result = result + list[i]
+   } else if(list[i + 1] - list[i] === 1 && list[i + 2] - list[i + 1] === 1 && !dash){
+     result = result + ',' + list[i] + '-';
+     dash = true;
+   } else if (list[i + 1] - list[i] !== 1 && dash){
+     result = result + list[i]
+     dash = false;
+   } else if(list[i + 1] - list[i] !== 1){
+     result = result + ',' + list[i]
+   } else if(list[i + 1] - list[i] === 1 && !dash){
+    result = result + ',' + list[i]
+   }
+  }
+  return result;
+}
 
 //-Question-
 //-Answer-
