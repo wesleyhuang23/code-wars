@@ -2594,8 +2594,14 @@ function removeChar(str){
   return letters.join('');
 };
 
-//-Question-
+//-Question- Es6 string addition
+function joinStrings(string1, string2){
+
+}
 //-Answer-
+function joinStrings(string1, string2){
+   return `${string1} ${string2}`
+}
 
 //-Question-
 //-Answer-
