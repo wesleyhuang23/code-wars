@@ -2603,8 +2603,24 @@ function joinStrings(string1, string2){
    return `${string1} ${string2}`
 }
 
-//-Question-
+//-Question- find min and max of array kyu 8
+var min = function(list){
+
+}
 //-Answer-
+var min = function(list){
+    list.sort(function(a, b){
+        return a - b
+      });
+    return list[0];
+}
+
+var max = function(list){
+    list.sort(function(a, b){
+        return a - b;
+      })
+    return list[list.length - 1];
+}
 
 //-Question-
 //-Answer-
