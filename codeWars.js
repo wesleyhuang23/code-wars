@@ -2622,7 +2622,7 @@ var max = function(list){
     return list[list.length - 1];
 }
 
-//-Question-
+//-Question-"range extraction"
 function solution(list){
 
 }
@@ -2651,8 +2651,31 @@ function solution(list){
   return result;
 }
 
-//-Question-
+//-Question- countRed Beads kyu 7
+function countRedBeads(n) {
+
+}
 //-Answer-
+function countRedBeads(n) {
+  let red = 0;
+  let blue = false;
+  let blueCount = 0;
+  let count = 0;
+  for(let i = 0; blueCount < n; i++){
+    if(!blue){
+      blue = true;
+      blueCount++
+    } else if(blue && red < 1){
+      red++
+      count++;
+    } else if(red === 1 && blue){
+      red = 0;
+      count++;
+      blue = false;
+    }
+  }
+  return count;
+}
 
 //-Question-
 //-Answer-
