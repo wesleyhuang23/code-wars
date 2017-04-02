@@ -2810,8 +2810,27 @@ function formatDuration (seconds) {
   return result.join(' ');
 }
 
-//-Question-
+//-Question- array similar kyu 6
+function arraysSimilar(arr1, arr2) {
+
+}
 //-Answer-
+function arraysSimilar(arr1, arr2) {
+  arr1.sort(function(a, b){
+    return a - b;
+  });
+  arr2.sort(function(a,b){
+    return a - b;
+  });
+  for(let i = 0; i < arr1.length; i++){
+    if(arr1[i] !== arr2[i]){
+      return false;
+    }
+  }
+  if(arr1.length === arr2.length){
+    return true;
+  }
+}
 
 //-Question-
 //-Answer-
