@@ -2677,8 +2677,18 @@ function countRedBeads(n) {
   return count;
 }
 
-//-Question-
+//-Question- multiply all currying kyu 7
+function multiplyAll(arr){
+
+}
 //-Answer-
+function multiplyAll(arr){
+  return function(n){
+    return arr.map((el) => {
+      return n * el;
+    });
+  }
+}
 
 //-Question-
 //-Answer-
