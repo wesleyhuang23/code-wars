@@ -1,6 +1,4 @@
-#-Question-Jenny's secret
-def greet(name):
-
+#-Question-Jenny's secret message
 #-Answer-
 def greet(name):
     if name == "Johnny":
@@ -8,63 +6,15 @@ def greet(name):
     else:
         return "Hello, %s!" % (name)
 
-
-#-Question-sum or positive
-def positive_sum(arr):
-    # Your code here
-    return 0
-#-Answer-
-def positive_sum(arr):
-    sum = 0
-    for i in range(0, len(arr)):
-        if arr[i] > 0:
-            sum = sum + arr[i]
-    return sum
-
-#-Question-count the monkey
-def monkey_count(n):
-    #your code here
-#-Answer-
-def monkey_count(n):
-    output = []
-    for i in range(1, n + 1):
-        #cause n is not included in the range
-        output.append(i)
-    return output
-
-#-Question-sum of 0 to N
-def show_sequence(n):
-    pass
-#-Answer-
-def show_sequence(n):
-    output = ""
-    sum = 0
-    if n == 0:
-        return '0=0'
-    elif n < 0:
-        return '%s<0' % (n)
-    for i in range(0, n + 1):
-        if i == n:
-            output = output + str(i)
-            sum = sum + i
-        else:
-            output = output + str(i) + '+'
-            sum = sum + i
-    output = output + " = " + str(sum)
-    return output
-
-#-Question-plural
-def plural(n):
+#-Question-Plural
 #-Answer-
 def plural(n):
     if n != 1:
         return True
     elif n == 1:
         return False
-        
 
 #-Question-Even or odd
-def even_or_odd(number):
 #-Answer-
 def even_or_odd(number):
     if number % 2 == 0:
@@ -72,9 +22,7 @@ def even_or_odd(number):
     elif number % 2 != 0:
         return "Odd"
 
-#-Question-Calculate average
-def find_average(array):
-    
+#-Question-calculate average
 #-Answer-
 def find_average(array):
     if len(array) == 0:
@@ -84,99 +32,48 @@ def find_average(array):
         for i in range(0, len(array)):
             sum = sum + array[i]
         return sum / len(array)
-    
 
-#-Question-Covert string to array
-def string_to_array(string):
+#-Question-Convert String to array
 #-Answer-
 def string_to_array(string):
     return string.split(' ')
 
-#-Question- true or false
-def bool_to_word(bool):
+#-Question-Convert boolean values to strings 'Yes' or 'No'.
 #-Answer-
 def bool_to_word(bool):
     if bool:
         return 'Yes'
-    else
-        return 'No
+    else:
+        return 'No'
 
-#-Question-volume of cuboid
-def getVolumeOfCubiod(length, width, height):
-    
+#-Question-Sum of positive
+#-Answer-
+def positive_sum(arr):
+    sum = 0
+    for i in range(0, len(arr)):
+        if arr[i] > 0:
+            sum = sum + arr[i]
+    return sum
+
+#-Question-Volume of cuboid
 #-Answer-
 def getVolumeOfCubiod(length, width, height):
     return length * height * width
 
-#-Question-Reverse words
-def reverse_words(str):
-
+#-Question-Count the monkeys
 #-Answer-
-def reverse_words(str):
-      output = []
-  words = str.split(' ')
-  for i in range(0, len(words)):
-      letters = list(words[i])
-      letters.reverse()
-      output.append(''.join(letters))
-  return ' '.join(output)
+def monkey_count(n):
+    output = []
+    for i in range(1, n + 1):
+        output.append(i)
+    return output
 
-#-Question-reverse words
-def reverse(st):
-
+#-Question-Reverse words in string
 #-Answer-
 def reverse(st):
     words = st.split(' ')
     words.reverse()
     return " ".join(words)
-
-#-Question- is_prime python kyu 6
-def is_prime(num):
-
-#-Answer-
-def is_prime(num):
-      if num <= 1:
-      return False
-  if num == 2:
-      return True
-  for i in range(2, num):
-      if num % i == 0:
-          return False
-  return True
-
-#-Question-
-#-Answer-
-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
-
-#-Question-
-#-Answer-
 
 #-Question-
 #-Answer-
