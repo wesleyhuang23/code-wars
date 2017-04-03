@@ -2832,8 +2832,18 @@ function arraysSimilar(arr1, arr2) {
   }
 }
 
-//-Question-
+//-Question-tail swap kyu 7
+function tailSwap(arr) {
+
+}
 //-Answer-
+function tailSwap(arr) {
+  let first = arr[0].match(/\:(.*)/);
+  let second = arr[1].match(/\:(.*)/);
+  arr[0] = arr[0].replace(/\:(.*)/, second[0])
+  arr[1] = arr[1].replace(/\:(.*)/, first[0])
+  return arr;
+}
 
 //-Question-
 //-Answer-
