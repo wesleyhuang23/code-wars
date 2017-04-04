@@ -456,8 +456,16 @@ function openOrSenior(data){
   return result;
 }
 
-//-Question-
+//-Question-Sort numbers
 //-Answer-
+function solution(nums){
+  if(nums === null){
+    return [];
+  }
+  return nums.sort(function(a, b){
+    return a - b;
+  })
+}
 
 //-Question-
 //-Answer-
