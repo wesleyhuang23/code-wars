@@ -467,8 +467,27 @@ function solution(nums){
   })
 }
 
-//-Question-
+//-Question-Remove the minimum
 //-Answer-
+function removeSmallest(numbers) {
+  let unsorted = numbers.join(' ');
+  let test = false;
+  let sorted = numbers.sort((a,b) => {
+    return a - b;
+  })
+  let smallest = sorted[0];
+  unsorted = unsorted.split(' ').map(num => {
+      return Number(num);
+  });
+  for(let i = 0; i < unsorted.length; i++){
+    if(smallest == unsorted[i]){
+      unsorted.splice(i, 1);
+      test = true;
+      break;
+    }
+  }
+  return test ? unsorted : [];
+}
 
 //-Question-
 //-Answer-
