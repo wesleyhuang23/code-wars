@@ -489,9 +489,18 @@ function removeSmallest(numbers) {
   return test ? unsorted : [];
 }
 
-//-Question-
+//-Question-Sum of Array Averages
 //-Answer-
-
+function sumAverage(arr) {
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+    let total = arr[i].reduce( (a,b) => {
+      return a + b;
+    })
+    sum = sum + (total / arr[i].length);
+  }
+  return Math.floor(sum)
+}
 
 //-Question-
 //-Answer-
