@@ -875,8 +875,55 @@ function solution(number){
   return result;
 }
 
-//-Question-
+//-Question- Master of Files
 //-Answer-
+String.prototype.isAudio= function(){
+  let period = false;
+  for(let i = 0; i < this.length; i++){
+    if((this[i] === ' ' || Number(this[i]) % 1 === 0) && !period){
+      return false;
+    }
+    if(this[i] === '.'){
+      period = true;
+      continue;
+    }
+    if(period){
+      if(this[i] == this[i].toUpperCase() && this[i] % 1 !== 0){
+        return false;
+      }
+    }
+  }
+  let file = this.match(/\.(.*)/g)
+  if(file[0] === '.mp3' || file[0] === '.flac' || file[0] === '.alac' || file[0] === '.aac'){
+     return true 
+   } else {
+     return false
+   }
+   
+};
+String.prototype.isImage= function(){
+  let period = false;
+  for(let i = 0; i < this.length; i++){
+    if((this[i] === ' ' || Number(this[i]) % 1 === 0) && !period){
+      return false;
+    }
+    if(this[i] === '.'){
+      period = true;
+      continue;
+    }
+    if(period){
+      if(this[i] == this[i].toUpperCase() && this[i] % 1 !== 0){
+        return false;
+      }
+    }
+  }
+  let file = this.match(/\.(.*)/g)
+  if(file[0] === '.jpg' || file[0] === '.jpeg' || file[0] === '.png' || file[0] === '.bmp' || file[0] === '.gif'){
+     return true
+   } else {
+     return false
+   }
+};
 
 //-Question-
 //-Answer-
