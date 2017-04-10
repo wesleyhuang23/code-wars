@@ -340,8 +340,20 @@ var max = function(list){
     return list[list.length - 1];
 }
 
-//-Question-
+//-Question-Generate range of numbers
 //-Answer-
+function generateRange(min, max, step){
+  let result = [];
+  let sum = 0;
+  result.push(min);
+  for(let sum = min; sum < max;){
+    result.push(sum += step);
+  }
+  if(result[result.length - 1] > max){
+    result.splice(result.length - 1, 1);
+  }
+  return result;
+}
 
 //-Question-
 //-Answer-
