@@ -355,8 +355,11 @@ function generateRange(min, max, step){
   return result;
 }
 
-//-Question-
+//-Question-Simple multiplication
 //-Answer-
+function simpleMultiplication(n){
+  return n % 2 === 0 ? n * 8 : n * 9;
+}
 
 //-Question-
 //-Answer-
