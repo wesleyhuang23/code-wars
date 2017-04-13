@@ -389,8 +389,17 @@ function switchItUp(number){
 }
 
 
-//-Question-
+//-Question- opposite number
 //-Answer-
+function opposite(number) {
+  if(number === 0){
+    return 0;
+  } else if(number > 0){
+    return -Math.abs(number);
+  } else if(number < 0){
+    return Math.abs(number);
+  }
+}
 
 //-Question-
 //-Answer-
