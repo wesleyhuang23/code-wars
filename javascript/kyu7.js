@@ -502,8 +502,23 @@ function sumAverage(arr) {
   return Math.floor(sum)
 }
 
-//-Question-
+//-Question-Find the stray number
 //-Answer-
+function stray(numbers) {
+  let obj = {};
+  for(let i = 0; i < numbers.length; i++){
+    if(!obj[numbers[i]]){
+      obj[numbers[i]] = 1 
+    } else {
+      obj[numbers[i]]++;
+    }
+  }
+  for(let i in obj){
+    if(obj[i] === 1){
+      return Number(i);
+    }
+  }
+}
 
 //-Question-
 //-Answer-
