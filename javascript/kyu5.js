@@ -239,8 +239,51 @@ function dirReduc(arr){
   return arr
 }
 
-//-Question-
+//-Question-human reabable time
 //-Answer-
+function humanReadable(seconds) {
+  let result = [];
+  let hours = 0; let minutes = 0; let second = 0;
+  
+  while(seconds > 0){
+    if(seconds >= 3600){
+      hours++;
+      seconds -= 3600
+    } else if(seconds >= 60){
+      minutes++;
+      seconds -= 60;
+    } else if(seconds < 60){
+      second += seconds;
+      seconds -= seconds
+    }
+  }
+  
+  if(hours.toString().length < 2){
+    result.push('0');
+    result.push(hours.toString());
+  } else {
+    result.push(hours.toString());
+  }
+  
+  result.push(':');
+  
+  if(minutes.toString().length < 2){
+    result.push('0');
+    result.push(minutes.toString());
+  } else {
+    result.push(minutes.toString());
+  }
+  
+  result.push(':');
+  
+  if(second.toString().length < 2){
+    result.push('0');
+    result.push(second.toString());
+  } else {
+    result.push(second.toString());
+  }
+  return result.join('');
+}
 
 //-Question-
 //-Answer-
