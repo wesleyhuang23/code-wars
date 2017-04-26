@@ -925,8 +925,25 @@ String.prototype.isImage= function(){
    }
 };
 
-//-Question-
+//-Question-N-th Fibonacci
 //-Answer-
+function nthFibo(n) {
+  switch(n){
+    case 0:
+      return 0;
+    case 1:
+      return 0;
+    case 2:
+      return 1;
+    case 3:
+      return 1;
+  }
+  let result = [0, 1, 1];
+  for(let i = 2; i < n; i++){
+    result.push(result[i] + result[i - 1])
+  }
+  return result[result.length - 2];
+}
 
 //-Question-
 //-Answer-
