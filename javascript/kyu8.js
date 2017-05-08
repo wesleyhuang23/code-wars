@@ -401,8 +401,19 @@ function opposite(number) {
   }
 }
 
-//-Question-
+//-Question-Invert Values
 //-Answer-
+function invert(array) {
+   return array.map((num) => {
+     if(Math.sign(num) === 1){
+       return Number('-' + num.toString());
+     } else if(Math.sign(num) === -1){
+       return Math.abs(num)
+     } else {
+       return num;
+     }
+   });
+}
 
 //-Question-
 //-Answer-
