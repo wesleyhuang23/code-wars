@@ -945,8 +945,27 @@ function nthFibo(n) {
   return result[result.length - 2];
 }
 
-//-Question-
+//-Question-Where is my parent?
 //-Answer-
+function findChildren(dancingBrigade){
+  let sorted = dancingBrigade.split('').sort();
+  let result = [];
+  for(let i = 0; i < sorted.length; i++){
+    if(result.length === sorted.length){
+      break;
+    }
+    if(sorted[i] === sorted[i].toUpperCase()){
+      var current = sorted[i];
+      result.push(current);
+    }
+    for(let j = 0; j < sorted.length; j++){
+      if(current.toLowerCase() === sorted[j].toLowerCase() && j !== i){
+        result.push(sorted[j]);
+      }
+    }
+  }
+  return result.join('');
+};
 
 //-Question-
 //-Answer-
